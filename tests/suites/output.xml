@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2026-06-18T23:08:36.312435" rpa="false" schemaversion="5">
+<suite id="s1" name="bookingTests" source="C:\Users\kcao3\Downloads\nature-travel\tests\suites\bookingTests.robot">
+<test id="s1-t1" name="Booking Page Loads" line="11">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.617488" level="INFO">${url} = http://127.0.0.1:5173/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.617488" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.617488" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5173/pages/booking/booking.html?tourId=1'.</msg>
+<msg time="2026-06-18T23:08:36.619066" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-06-18T23:08:36.619066" level="FAIL">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.617488" elapsed="0.051950">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.669438" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.669438" elapsed="0.000000"/>
+</kw>
+<arg>${url}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.617488" elapsed="0.052960">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.616486" elapsed="0.053962">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.671457" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.672531" level="INFO">${test_name} = Booking Page Loads</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.671457" elapsed="0.001074"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-18T23:08:36.672531" level="INFO">${safe_test_name} = Booking_Page_Loads</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.672531" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.672531" level="INFO">${directory} = C:\Users\kcao3\Downloads\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>C:\\Users\\kcao3\\Downloads\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.672531" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-18T23:08:36.672531" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking"&gt;C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.672531" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.672531" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.672531" elapsed="0.000000"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-18T23:08:36.671457" elapsed="0.001074"/>
+</kw>
+<doc>Open booking page and verify the booking form is visible.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.615484" elapsed="0.058046">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</test>
+<test id="s1-t2" name="Fill Booking Form And Submit" line="16">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.674457" level="INFO">${url} = http://127.0.0.1:5173/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.674457" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.674457" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5173/pages/booking/booking.html?tourId=1'.</msg>
+<msg time="2026-06-18T23:08:36.674457" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-06-18T23:08:36.674457" level="FAIL">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.674457" elapsed="0.001000">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.675457" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.675457" elapsed="0.000000"/>
+</kw>
+<arg>${url}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.674457" elapsed="0.001000">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.673530" elapsed="0.001927">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.676457" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Booking Form" owner="BookingPage">
+<arg>${today}</arg>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Vegan meal</arg>
+<status status="NOT RUN" start="2026-06-18T23:08:36.676457" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=summary-grand-total</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.676457" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.677453" level="INFO">${test_name} = Fill Booking Form And Submit</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.677453" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-18T23:08:36.677453" level="INFO">${safe_test_name} = Fill_Booking_Form_And_Submit</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.677453" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.677453" level="INFO">${directory} = C:\Users\kcao3\Downloads\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>C:\\Users\\kcao3\\Downloads\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.677453" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-18T23:08:36.677453" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking"&gt;C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.677453" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.677453" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.677453" elapsed="0.000000"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-18T23:08:36.676457" elapsed="0.000996"/>
+</kw>
+<doc>Open booking page, fill the form and verify summary updates.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.673530" elapsed="0.003923">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</test>
+<test id="s1-t3" name="Booking Without Date Shows Error" line="23">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.679972" level="INFO">${url} = http://127.0.0.1:5173/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.678963" elapsed="0.001009"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.679972" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5173/pages/booking/booking.html?tourId=1'.</msg>
+<msg time="2026-06-18T23:08:36.679972" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-06-18T23:08:36.679972" level="FAIL">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.679972" elapsed="0.001079">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.681051" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.681051" elapsed="0.000000"/>
+</kw>
+<arg>${url}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.679972" elapsed="0.001079">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.678963" elapsed="0.002088">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=adults-input</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.681051" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=children-input</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.681969" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=booking-submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.681969" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=toast-notification</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.681969" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.682975" level="INFO">${test_name} = Booking Without Date Shows Error</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.682975" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-18T23:08:36.682975" level="INFO">${safe_test_name} = Booking_Without_Date_Shows_Error</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.682975" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.683972" level="INFO">${directory} = C:\Users\kcao3\Downloads\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>C:\\Users\\kcao3\\Downloads\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.683972" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-18T23:08:36.684979" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking"&gt;C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.683972" elapsed="0.001007"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.685968" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.684979" elapsed="0.000989"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-18T23:08:36.682975" elapsed="0.002993"/>
+</kw>
+<doc>Verify booking validation when date is missing.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.678963" elapsed="0.007005">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</test>
+<test id="s1-t4" name="Booking Without Adults Shows Error" line="31">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.687335" level="INFO">${url} = http://127.0.0.1:5173/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.687335" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.687335" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5173/pages/booking/booking.html?tourId=1'.</msg>
+<msg time="2026-06-18T23:08:36.687335" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-06-18T23:08:36.687335" level="FAIL">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.687335" elapsed="0.001510">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.688845" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.688845" elapsed="0.000000"/>
+</kw>
+<arg>${url}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.687335" elapsed="0.001510">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.687335" elapsed="0.001510">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.688845" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>${today}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.689852" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=children-input</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.689852" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=booking-submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.689852" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=toast-notification</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.689852" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.691862" level="INFO">${test_name} = Booking Without Adults Shows Error</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.691862" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-18T23:08:36.692866" level="INFO">${safe_test_name} = Booking_Without_Adults_Shows_Error</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.691862" elapsed="0.001004"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.692866" level="INFO">${directory} = C:\Users\kcao3\Downloads\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>C:\\Users\\kcao3\\Downloads\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.692866" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-18T23:08:36.692866" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking"&gt;C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.692866" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.692866" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.692866" elapsed="0.000000"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-18T23:08:36.690855" elapsed="0.002011"/>
+</kw>
+<doc>Verify booking validation when adult count is missing.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.685968" elapsed="0.006898">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</test>
+<test id="s1-t5" name="Booking With Children And Note Shows Summary" line="40">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.694863" level="INFO">${url} = http://127.0.0.1:5173/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.694863" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.695904" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5173/pages/booking/booking.html?tourId=1'.</msg>
+<msg time="2026-06-18T23:08:36.695904" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-06-18T23:08:36.695904" level="FAIL">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.695904" elapsed="0.000000">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.696958" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.696958" elapsed="0.000000"/>
+</kw>
+<arg>${url}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.694863" elapsed="0.002095">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2026-06-18T23:08:36.694863" elapsed="0.002095">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.696958" elapsed="0.000000"/>
+</kw>
+<kw name="Fill Booking Form" owner="BookingPage">
+<arg>${today}</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>Need baby seat</arg>
+<status status="NOT RUN" start="2026-06-18T23:08:36.696958" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=summary-grand-total</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-18T23:08:36.697863" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.697863" level="INFO">${test_name} = Booking With Children And Note Shows Summary</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.697863" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-18T23:08:36.697863" level="INFO">${safe_test_name} = Booking_With_Children_And_Note_Shows_Summary</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.697863" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-18T23:08:36.698962" level="INFO">${directory} = C:\Users\kcao3\Downloads\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>C:\\Users\\kcao3\\Downloads\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.698962" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-18T23:08:36.698962" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking"&gt;C:\Users\kcao3\Downloads\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.698962" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-18T23:08:36.699472" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.699472" elapsed="0.000000"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-18T23:08:36.697863" elapsed="0.001609"/>
+</kw>
+<doc>Fill booking form with children and note, then verify summary updates.</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.693866" elapsed="0.005606">ValueError: Unable to parse option: "add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)"</status>
+</test>
+<kw name="Close Application" owner="common_keywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-06-18T23:08:36.702473" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-06-18T23:08:36.701483" elapsed="0.000990"/>
+</kw>
+<doc>Booking tests (POM)</doc>
+<status status="FAIL" start="2026-06-18T23:08:36.313436" elapsed="0.389037"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="bookingTests" id="s1" pass="0" fail="5" skip="0">bookingTests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

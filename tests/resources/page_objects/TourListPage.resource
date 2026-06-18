@@ -1,0 +1,19 @@
+*** Settings ***
+Resource    ../common_keywords.resource
+
+*** Variables ***
+${TOURS_PATH}    /pages/tours/tour_list/tour_list.html
+${DEFAULT_BASE_URL}    http://127.0.0.1:5173
+
+*** Keywords ***
+Go To Tours List
+    [Arguments]    ${base_url}=${DEFAULT_BASE_URL}
+    ${url}=    Set Variable    ${base_url}${TOURS_PATH}
+    Open Application    ${url}
+
+Apply Filters    [Arguments]    ${location}=${EMPTY}    ${price}=${EMPTY}    ${rating}=${EMPTY}
+    ${location}    Run Keyword If    '${location}' != ''    Select From List By Value    id=filter-location    ${location}
+    ${price}       Run Keyword If    '${price}' != ''       Select From List By Value    id=filter-price       ${price}
+    ${rating}      Run Keyword If    '${rating}' != ''      Select From List By Value    id=filter-rating      ${rating}
+    Click Element    id=btn-apply-filters
+    Wait Until Element Is Visible    id=tours-grid-container    timeout=5s

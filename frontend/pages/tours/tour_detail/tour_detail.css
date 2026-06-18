@@ -1,0 +1,257 @@
+/* Tour Detail Page specific layout styling */
+
+.detail-banner {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  background-attachment: fixed;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(27, 27, 27, 0.4) 0%, rgba(26, 63, 47, 0.9) 100%);
+  z-index: 1;
+}
+
+.banner-text-container {
+  position: relative;
+  z-index: 2;
+}
+
+.detail-banner-title {
+  color: var(--color-white);
+  font-size: 2.8rem;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .detail-banner-title {
+    font-size: 2rem;
+  }
+}
+
+.banner-location {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+
+/* Page core grid */
+.detail-layout-container {
+  padding: 4rem 1.5rem;
+}
+
+.detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .detail-grid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .detail-main-content {
+    flex-grow: 1;
+  }
+
+  .detail-sidebar {
+    width: 360px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 110px;
+  }
+}
+
+/* Sections common themes */
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--color-primary);
+}
+
+.gallery-section, .desc-section, .schedule-section, .reviews-section {
+  margin-bottom: 3.5rem;
+}
+
+/* Gallery cards images grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item-full {
+  grid-column: 1 / -1;
+  height: 320px;
+}
+
+.gallery-thum {
+  height: 150px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Tour description card */
+.desc-card {
+  padding: 2rem;
+  background-color: var(--color-white);
+}
+
+.desc-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Accordion trigger elements styling */
+.accordion-item {
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--color-white);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: left;
+}
+
+.acc-indicator {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.accordion-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  background-color: var(--color-white);
+  display: none; /* Controlled dynamically in JS */
+}
+
+.accordion-item.open .accordion-content {
+  display: block;
+}
+
+/* Booking sidebar widget card */
+.booking-sidebar-card {
+  padding: 2rem;
+  background-color: var(--color-white);
+}
+
+.booking-sidebar-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.rate-preview {
+  margin-bottom: 2rem;
+}
+
+.rate-label {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  display: block;
+}
+
+.rate-price {
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  display: inline-block;
+  margin-top: 0.25rem;
+}
+
+.rate-duration {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.tour-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.perk-item {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.noty-text {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* Customer Reviews card styling */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  padding: 1.5rem;
+  background-color: var(--color-white);
+}
+
+.review-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(45,106,79,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.reviewer-name {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.15rem;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.review-comment {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+</style>

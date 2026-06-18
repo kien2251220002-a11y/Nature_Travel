@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Ký Thành Viên - NatureTravel</title>
+  <meta name="description" content="Đăng ký tài khoản thám hiểm thiên nhiên hoang dã cùng NatureTravel.">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/auth/register/register.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main class="register-page-container">
+    <div class="register-wrapper container">
+      <div class="register-bento card">
+        
+        <!-- Column 1: Aesthetic Eco Travel Promo side panel -->
+        <div class="register-promo-panel">
+          <div class="promo-overlay"></div>
+          <div class="promo-details">
+            <span class="logo-emoji">&#127957;</span>
+            <h2>Khám Phá Trách Nhiệm Với Trái Đất</h2>
+            <p>Chào đón bạn gia nhập cộng đồng những người đam mê xê dịch thầm lặng, trekking bảo tồn và chèo hèo qua các vùng vịnh lộng lẫy.</p>
+            <ul class="promo-list">
+              <li>🏔️ Đi để khám phá và hòa mình</li>
+              <li>🐾 Trải nghiệm sinh thái bản địa đích thực</li>
+              <li>💚 Đồng hành cùng mảng xanh Việt Nam</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Column 2: Sign-up credentials entry form -->
+        <div class="register-form-panel">
+          <div class="panel-header">
+            <h1>Đăng Ký Thành Viên</h1>
+            <p>Khởi động cung đường khám phá kỳ vĩ mới</p>
+          </div>
+
+          <form id="register-form" class="auth-box-form">
+            <div class="form-group">
+              <label for="full-name-input">Họ và Tên</label>
+              <input type="text" class="form-control" id="full-name-input" name="full_name" required placeholder="Nguyễn Văn A" aria-label="Nhập Họ Tên">
+            </div>
+
+            <div class="form-group">
+              <label for="email-input">Địa chỉ Email</label>
+              <input type="email" class="form-control" id="email-input" name="email" required placeholder="example@gmail.com" aria-label="Nhập Email">
+            </div>
+
+            <div class="form-group">
+              <label for="phone-input">Số Điện Thoại</label>
+              <input type="tel" class="form-control" id="phone-input" name="phone" placeholder="0901234567" aria-label="Nhập Điện thoại">
+            </div>
+
+            <div class="grid-form-group">
+              <div class="form-group">
+                <label for="password-input">Mật Khẩu</label>
+                <input type="password" class="form-control" id="password-input" name="password" required placeholder="Tối thiểu 6 ký tự" aria-label="Nhập Mật khẩu">
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password-input">Xác nhận mật khẩu</label>
+                <input type="password" class="form-control" id="confirm-password-input" name="confirm_password" required placeholder="Nhập lại mật khẩu" aria-label="Xác thực mật khẩu">
+              </div>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="terms-checkbox" required aria-label="Đồng ý điều khoản">
+              <label for="terms-checkbox">Tôi đồng ý với các <a href="#" class="terms-link" onclick="alert('Đang tải điều khoản sử dụng sinh thái...')">Điều khoản dịch vụ và chính sách bảo an xanh</a></label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" id="btn-register">
+              <span>Đăng Ký</span>
+            </button>
+          </form>
+
+          <p class="signin-prompt">
+            Bạn đã có tài khoản rồi? <a href="/login">Đăng nhập ngay</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/auth/register/register.js"></script>
+</body>
+</html>

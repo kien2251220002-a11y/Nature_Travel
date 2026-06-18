@@ -1,0 +1,175 @@
+<footer class="footer-wrapper">
+  <div class="container footer-grid">
+    <div class="footer-column branding">
+      <h3 class="footer-logo">&#127794; NatureTravel</h3>
+      <p class="footer-desc">
+        Hành trình tìm lại sự bình yên giữa nhịp sống hiện đại. Chúng tôi cung cấp các tour du lịch sinh thái hoang sơ, chất lượng cao, bảo vệ môi trường và tôn vinh vẻ đẹp tự nhiên của Việt Nam.
+      </p>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook" class="social-icon">fb</a>
+        <a href="#" aria-label="Instagram" class="social-icon">ig</a>
+        <a href="#" aria-label="Youtube" class="social-icon">yt</a>
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4 class="footer-header">Điểm Đến Hấp Dẫn</h4>
+      <ul class="footer-links">
+        <li><a href="/tours?location=Quảng+Ninh">Vịnh Hạ Long</a></li>
+        <li><a href="/tours?location=Lào+Cai">Sâu Trong Sapa</a></li>
+        <li><a href="/tours?location=Quảng+Bình">Đại Ngàn Phong Nha</a></li>
+        <li><a href="/tours?location=Kiên+Giang">Đảo Ngọc Phú Quốc</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4 class="footer-header">Chính Sách & Hỗ Trợ</h4>
+      <ul class="footer-links">
+        <li><a href="#">Điều khoản sử dụng</a></li>
+        <li><a href="#">Chính sách bảo mật</a></li>
+        <li><a href="#">Chính sách hoàn tiền</a></li>
+        <li><a href="#">Hướng dẫn đặt tour</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4 class="footer-header">Liên Hệ Với Chúng Tôi</h4>
+      <ul class="footer-contact">
+        <li><span class="contact-icon">&#128205;</span> Số 123 Đường Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</li>
+        <li><span class="contact-icon">&#128222;</span> Hotline: 1800 6868 (Miễn phí)</li>
+        <li><span class="contact-icon">&#128231;</span> Email: contact@naturetravel.com</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container footer-bottom-flex">
+      <p>&copy; 2026 NatureTravel. Tất cả quyền được bảo lưu. Phát triển bới Senior Fullstack Developer.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer-wrapper {
+  background-color: #1a3f2f; /* Deep dark forest green */
+  color: #e2f0e9;
+  padding: 4rem 0 0 0;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  }
+}
+
+.footer-logo {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--color-secondary) !important;
+  margin-bottom: 1rem;
+}
+
+.footer-desc {
+  font-size: 0.95rem;
+  color: #a7d9c1;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.08);
+  color: var(--color-secondary);
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--color-secondary);
+  color: #1a3f2f;
+  transform: translateY(-3px);
+}
+
+.footer-header {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-secondary);
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #a7d9c1;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-white);
+  padding-left: 5px;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  font-size: 0.95rem;
+  color: #a7d9c1;
+}
+
+.contact-icon {
+  color: var(--color-secondary);
+  font-size: 1.1rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 1.5rem 0;
+  background-color: #143124;
+  font-size: 0.85rem;
+  text-align: center;
+  color: #8bbfa6;
+}
+</style>

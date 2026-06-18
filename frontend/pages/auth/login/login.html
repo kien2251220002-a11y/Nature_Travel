@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập - NatureTravel</title>
+  <meta name="description" content="Đăng nhập tài khoản NatureTravel để bắt đầu thám hiểm tự nhiên.">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/auth/login/login.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main class="login-page-container">
+    <div class="login-wrapper container">
+      <div class="login-bento card">
+        
+        <!-- Column 1: Aesthetic Landscape Promo Info -->
+        <div class="login-promo-panel">
+          <div class="promo-overlay"></div>
+          <div class="promo-details">
+            <span class="logo-emoji">&#127794;</span>
+            <h2>Bắt Đầu Chuyến Đi Của Riêng Bạn</h2>
+            <p>Trở thành thành viên của gia đình NatureTravel để mở khóa các đặc quyền thám hiểm, hành trình tuỳ biến và tích phân thưởng lên tới 10% cho mỗi chuyến đặt vé dã ngoại.</p>
+            <div class="promo-testimonial">
+              <p>"Dịch vụ bảo tồn tuyệt vời! Bữa tối giữa lòng suối Ba Bể thật sự không thể nào quên được."</p>
+              <span>- Anh Nam, Du khách 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: The Sign-in Credential Entry Box -->
+        <div class="login-form-panel">
+          <div class="panel-header">
+            <h1>Chào Mừng Trở Lại</h1>
+            <p>Hít thở sâu và đăng nhập tài khoản của bạn</p>
+          </div>
+
+          <form id="login-form" class="auth-box-form">
+            <div class="form-group">
+              <label for="email-input">Địa chỉ Email</label>
+              <input type="email" class="form-control" id="email-input" name="email" required placeholder="example@gmail.com" aria-label="Nhập Email">
+            </div>
+
+            <div class="form-group">
+              <div class="pwd-header">
+                <label for="password-input">Mật Khẩu</label>
+                <a href="#" class="forgot-link" onclick="alert('Tính năng khôi phục mật khẩu đang được bảo trì.')">Quên mật khẩu?</a>
+              </div>
+              <input type="password" class="form-control" id="password-input" name="password" required placeholder="🔑 Nhập ít nhất 6 ký tự" aria-label="Nhập Mật khẩu">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" id="btn-login">
+              <span>Đăng Nhập</span>
+            </button>
+            
+            <div class="divider">
+              <span>Hoặc tiếp tục với</span>
+            </div>
+
+            <!-- Google Login Button -->
+            <button type="button" class="btn btn-outline w-full google-btn" id="btn-login-google" onclick="alert('Đang kết nối tới Google OAuth... Chức năng demo.')">
+              <span class="google-logo">G</span> Đăng nhập với Google
+            </button>
+          </form>
+
+          <p class="signup-prompt">
+            Bạn chưa có tài khoản? <a href="/register" id="link-register">Đăng ký thành viên mới</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/auth/login/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Sách Tour Sinh Thái - NatureTravel</title>
+  <meta name="description" content="Hơn 12+ tour du lịch sinh thái rừng xanh, hang sâu và biển đảo trải khắp cả nước tại NatureTravel.">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/tours/tour_list/tour_list.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main class="tours-page-wrapper">
+    <div class="container">
+      
+      <div class="tours-header">
+        <h1>Bản Đồ Thám Hiểm Việt Nam</h1>
+        <p>Tìm kiếm cung đường hòa mình cùng thiên nhiên hùng vĩ phù hợp nhất với bạn.</p>
+      </div>
+
+      <!-- Main Columns layout -->
+      <div class="tours-layout">
+        
+        <!-- Left Side: Interactive Filters Panel -->
+        <aside class="filters-sidebar card" aria-label="Bộ lọc tìm kiếm">
+          <h2 class="sidebar-title">🔍 Bộ Lọc Tìm Kiếm</h2>
+
+          <form id="filter-form" class="filter-form-box">
+            
+            <!-- Filter item 1: Text Search -->
+            <div class="form-group">
+              <label for="search-input-box">Tìm theo từ khóa</label>
+              <input type="text" class="form-control" id="search-input-box" placeholder="Ví dụ: Hạ Long, Sapa...">
+            </div>
+
+            <!-- Filter item 2: Location Selector -->
+            <div class="form-group">
+              <label for="filter-location">Địa điểm du lịch</label>
+              <select class="form-control" id="filter-location">
+                <option value="">Tất cả vùng miền</option>
+                <option value="Quảng Ninh">Quảng Ninh</option>
+                <option value="Lào Cai">Lào Cai (Sapa / Fansipan)</option>
+                <option value="Quảng Bình">Quảng Bình</option>
+                <option value="Ninh Bình">Ninh Bình</option>
+                <option value="Lâm Đồng">Lâm Đồng (Đà Lạt)</option>
+                <option value="Kiên Giang">Kiên Giang (Phú Quốc)</option>
+                <option value="Yên Bái">Yên Bái</option>
+                <option value="Thừa Thiên Huế">Huế (Bạch Mã)</option>
+                <option value="Cần Thơ">Cần Thơ (Miền Tây)</option>
+              </select>
+            </div>
+
+            <!-- Filter item 3: Price Ceiling -->
+            <div class="form-group">
+              <label for="filter-price">Khoảng giá tối đa</label>
+              <select class="form-control" id="filter-price">
+                <option value="">Tất cả các khoảng giá</option>
+                <option value="1500000">Dưới 1.5 triệu VND</option>
+                <option value="2500000">Dưới 2.5 triệu VND</option>
+                <option value="4000000">Dưới 4.0 triệu VND</option>
+                <option value="6000000">Dưới 6.0 triệu VND</option>
+              </select>
+            </div>
+
+            <!-- Filter item 4: Minimum Rating level -->
+            <div class="form-group">
+              <label for="filter-rating">Đánh giá tối thiểu</label>
+              <select class="form-control" id="filter-rating">
+                <option value="">Tất cả điểm số</option>
+                <option value="4.9">Tuyệt hảo (4.9+ ★)</option>
+                <option value="4.8">Rất tốt (4.8+ ★)</option>
+                <option value="4.7">Tốt (4.7+ ★)</option>
+                <option value="4.6">Khá tốt (4.6+ ★)</option>
+              </select>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="filter-actions-box">
+              <button type="submit" class="btn btn-primary w-full" id="btn-apply-filters">Áp Dụng Bộ Lọc</button>
+              <button type="button" class="btn btn-outline w-full" id="btn-reset-filters">Xóa Tất Cả</button>
+            </div>
+
+          </form>
+        </aside>
+
+        <!-- Right Side: Tours Grid & Pagination -->
+        <section class="tours-grid-area" aria-label="Danh sách kết quả">
+          <div class="results-metadata">
+            <p id="results-count-text">Đang tải biểu mẫu dữ liệu...</p>
+          </div>
+
+          <!-- Grid columns container -->
+          <div class="grid-3" id="tours-grid-container">
+            <!-- Dynamic Tour cards are injected here by tour_list.js -->
+            <div class="loading-spinner text-center">Đang nạp các chuyến đi...</div>
+          </div>
+
+          <!-- Pagination row -->
+          <div class="pagination-container" id="pagination-box">
+            <button class="btn btn-outline btn-sm page-btn prev" id="btn-pagination-prev" disabled>&lt; Trước</button>
+            <div class="page-numbers-group" id="page-numbers">
+              <button class="btn btn-primary btn-sm page-btn active">1</button>
+            </div>
+            <button class="btn btn-outline btn-sm page-btn next" id="btn-pagination-next" disabled>Sau &gt;</button>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/tours/tour_list/tour_list.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* Booking reservation layout specific CSS */
+
+.booking-page-wrapper {
+  padding: 4rem 0;
+}
+
+.booking-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.booking-header h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.booking-header p {
+  color: var(--color-muted);
+}
+
+/* Grids core columns */
+.booking-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .booking-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .booking-form-area {
+    flex-grow: 1;
+  }
+
+  .booking-receipt-area {
+    width: 380px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 110px;
+  }
+}
+
+/* Left Form styling */
+.booking-form-card {
+  padding: 2.5rem;
+  background-color: var(--color-white);
+}
+
+.form-section-header {
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.form-section-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* Selected tour review bubble */
+.selected-tour-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(45, 106, 79, 0.05);
+  border: 1.5px solid rgba(45, 106, 79, 0.1);
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+.tree-icon {
+  font-size: 2.2rem;
+  color: var(--color-primary);
+}
+
+.selected-tour-box h3 {
+  font-size: 1.15rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.headcounts-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 1.5rem;
+}
+
+@media (min-width: 500px) {
+  .headcounts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.input-subtext {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* Right Receipt styling */
+.receipt-card {
+  padding: 2rem;
+  background-color: var(--color-white);
+}
+
+.receipt-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid rgba(45, 106, 79, 0.1);
+}
+
+.receipt-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(0,0,0,0.06);
+}
+
+.discount-banner {
+  background-color: rgba(116, 198, 157, 0.15);
+  border-left: 3px solid var(--color-secondary);
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.8rem;
+  color: #204f3b;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.receipt-divider {
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin: 1.5rem 0;
+}
+
+.grand-total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.grand-total-box strong {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.secure-checkout-seal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  background-color: #f9fafb;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  text-align: center;
+}

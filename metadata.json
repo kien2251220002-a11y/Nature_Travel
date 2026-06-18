@@ -1,0 +1,6 @@
+{
+  "name": "Nature Travel",
+  "description": "A nature travel tour platform with interactive front-end, rich sqlite3 back-end, and automated test skeleton.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

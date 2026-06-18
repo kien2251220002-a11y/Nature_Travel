@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hồ Sơ Cá Nhân - NatureTravel</title>
+  <meta name="description" content="Quản lý thông tin tài khoản thám hiểm, thay đổi số điện thoại và xem lại hóa đơn du lịch đặt chỗ tại NatureTravel.">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/profile/profile.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main class="profile-page-wrapper">
+    <div class="container">
+      
+      <!-- User profile header slot -->
+      <section class="profile-header card" aria-label="Khái quát tài khoản">
+        <div class="user-hero-flex">
+          <div class="user-avatar-huge">&#129408;</div>
+          <div>
+            <h1 id="profile-name">Đang tải tên...</h1>
+            <p id="profile-email" class="text-muted">Đang tải... | Thành viên thám hiểm sinh thái</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Profile bento layout columns -->
+      <div class="profile-layout-grid">
+        
+        <!-- Left Side: Custom Account details update Form -->
+        <section class="profile-update-section card" aria-label="Cập nhật cá nhân">
+          <h3>👤 Biên Tập Hồ Sơ Thám Hiểm</h3>
+          <p class="section-desc">Thay đổi tên hiển thị hoặc cập nhật số điện thoại liên hệ khẩn cấp của bạn.</p>
+
+          <form id="profile-edit-form" class="edit-form-box">
+            <div class="form-group">
+              <label for="profile-fullname-input">Họ và Tên</label>
+              <input type="text" class="form-control" id="profile-fullname-input" name="full_name" required placeholder="Nhập họ tên mới" aria-label="Biên tập Họ Tên">
+            </div>
+
+            <div class="form-group">
+              <label for="profile-phone-input">Số Điện Thoại Khẩn Cấp</label>
+              <input type="tel" class="form-control" id="profile-phone-input" name="phone" placeholder="Nhập số điện thoại" aria-label="Biên tập Điện thoại">
+            </div>
+
+            <button type="submit" class="btn btn-primary w-full" id="profile-update-btn">
+              <span>Lưu Thay Đổi Thám Hiểm</span>
+            </button>
+          </form>
+        </section>
+
+        <!-- Right Side: Booking logs logs tables -->
+        <section class="profile-history-section" aria-label="Lịch sử giao dịch">
+          <div class="history-card-header mb-4">
+            <h2>🎒 Lịch Sử Đặt Cung Đường Sinh Thái</h2>
+            <p>Danh sách các hành trình thám hiểm hoang sông bạn đã bảo lưu thành công trên hệ thống database.</p>
+          </div>
+
+          <!-- Transaction blocks table list -->
+          <div class="history-list-box" id="booking-history-table">
+            <div class="loading-spinner text-center">Đang trích xuất hóa đơn của bạn...</div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/profile/profile.js"></script>
+</body>
+</html>

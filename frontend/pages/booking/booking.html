@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt Tour Du Lịch Sinh Thái - NatureTravel</title>
+  <meta name="description" content="Xác nhận đặt vé, ngày khởi hành và thông số số lượng thính giả thám hiểm tại NatureTravel.">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/booking/booking.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main class="booking-page-wrapper">
+    <div class="container">
+      
+      <div class="booking-header">
+        <h1>Xác Nhận Đặt Cung Đường Thám Hiểm</h1>
+        <p>Vui lòng cập nhật thông số số lượng thành viên để tính toán hóa đơn sinh thái trọn gói.</p>
+      </div>
+
+      <div class="booking-layout">
+        
+        <!-- Left Side: Interactive reservation details Form -->
+        <section class="booking-form-area" aria-label="Chi tiết đặt tour">
+          <form id="booking-reserve-form" class="card booking-form-card">
+            
+            <div class="form-section-header">
+              <h2>📅 Thăng Số Hành Trình</h2>
+            </div>
+
+            <!-- Display Tour selected name -->
+            <div class="form-group">
+              <label>Tour Thám Hiểm Dự Kiến</label>
+              <div class="selected-tour-box" id="selected-tour-display">
+                <span class="tree-icon">&#127794;</span>
+                <div>
+                  <h3 id="display-tour-name">Đang tải thông tin tour...</h3>
+                  <span id="display-tour-location" class="text-muted text-xs">Vị trí...</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Start Date input -->
+            <div class="form-group">
+              <label for="booking-date-input">Ngày Khởi Hành Mong Muốn</label>
+              <input type="date" class="form-control" id="booking-date-input" name="booking_date" required aria-label="Ngày đặt">
+            </div>
+
+            <div class="headcounts-grid">
+              <!-- Adults selector -->
+              <div class="form-group">
+                <label for="adults-input">Người Lớn (100% giá)</label>
+                <input type="number" class="form-control" id="adults-input" name="adults" min="1" max="30" value="1" required aria-label="Số người lớn">
+                <span class="input-subtext">Độ tuổi từ 12 trở lên</span>
+              </div>
+
+              <!-- Children selector -->
+              <div class="form-group">
+                <label for="children-input">Trẻ Em (50% giá)</label>
+                <input type="number" class="form-control" id="children-input" name="children" min="0" max="25" value="0" required aria-label="Số trẻ em">
+                <span class="input-subtext">Độ tuổi từ 2 tới dưới 12</span>
+              </div>
+            </div>
+
+            <!-- Note textarea -->
+            <div class="form-group">
+              <label for="booking-note-input">Ghi Chú Đặc Biệt (Ăn chay, dị ứng thuốc, sức khỏe...)</label>
+              <textarea class="form-control" id="booking-note-input" name="note" rows="3" placeholder="Nhập yêu cầu đặc biệt của đoàn..." aria-label="Ghi chú"></textarea>
+            </div>
+
+            <!-- Submit trigger -->
+            <button type="submit" class="btn btn-primary btn-large w-full" id="booking-submit-btn">
+              <span>Xác Nhận & Tiến Hành Thanh Toán</span>
+            </button>
+
+          </form>
+        </section>
+
+        <!-- Right Side: Order Summary receipt box -->
+        <aside class="booking-receipt-area" aria-label="Hóa đơn đơn hàng">
+          <div class="receipt-card card">
+            <h3>🧾 Tóm Tắt Chi Phí Sinh Thái</h3>
+
+            <div class="receipt-line">
+              <span>Đơn giá chuẩn:</span>
+              <strong id="summary-base-price">0 VND</strong>
+            </div>
+
+            <div class="receipt-line">
+              <span id="summary-adults-label">Người lớn (x1):</span>
+              <strong id="summary-adults-total">0 VND</strong>
+            </div>
+
+            <div class="receipt-line">
+              <span id="summary-children-label">Trẻ em (x0):</span>
+              <strong id="summary-children-total">0 VND</strong>
+            </div>
+
+            <div class="discount-banner">
+              <span>🌿 Nature Benefit:</span>
+              <span>Đã miễn phí bộ dụng cụ thám hiểm trị giá 500.000 VND</span>
+            </div>
+
+            <div class="receipt-divider"></div>
+
+            <div class="grand-total-box">
+              <span>Tổng Cộng Hóa Đơn:</span>
+              <strong id="summary-grand-total">0 VND</strong>
+            </div>
+
+            <div class="secure-checkout-seal">
+              <span>🔒 Giao dịch bảo mật bằng mã hóa SSL 256-bit</span>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/booking/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Tour Thám Hiểm Thiên Nhiên - NatureTravel</title>
+  <meta name="description" content="Xem chi tiết lịch trình thám hiểm rừng thiêng nước độc cùng đội ngũ kiểm lâm lành nghề tại NatureTravel.">
+  
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/tours/tour_detail/tour_detail.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main class="tour-detail-page-wrapper">
+    <!-- Big Immersive Banner overlay with live title -->
+    <section class="detail-banner" id="tour-detail-banner-panel" aria-label="Hình ảnh đại diện">
+      <div class="banner-overlay"></div>
+      <div class="container banner-text-container">
+        <span class="badge badge-accent mb-4" id="tour-detail-badge-duration">Loading...</span>
+        <h1 class="detail-banner-title" id="tour-detail-title">Đang tải tên tour...</h1>
+        <p class="banner-location" id="tour-detail-location-text">📍 Đang tải...</p>
+      </div>
+    </section>
+
+    <!-- Main Content layout grid -->
+    <div class="container detail-layout-container">
+      <div class="detail-grid">
+        
+        <!-- Left Side: Tour info, galleries, accordions, reviews -->
+        <article class="detail-main-content">
+          
+          <!-- Image Gallery list -->
+          <section class="gallery-section" aria-label="Bưu ảnh">
+            <h2 class="section-title">🖼️ Album Trải Nghiệm Thám Hiểm</h2>
+            <div class="gallery-grid" id="tour-gallery">
+              <!-- Grid images loaded dynamically -->
+              <div class="gallery-item-full card">
+                <img id="main-gal-img" src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80" alt="Main view detail" referrerPolicy="no-referrer">
+              </div>
+              <div class="gallery-thum card">
+                <img src="https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&w=300&q=80" alt="Thumbnail 1" referrerPolicy="no-referrer">
+              </div>
+              <div class="gallery-thum card">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=300&q=80" alt="Thumbnail 2" referrerPolicy="no-referrer">
+              </div>
+            </div>
+          </section>
+
+          <!-- Broad Info description -->
+          <section class="desc-section" aria-label="Thông tin tour">
+            <h2 class="section-title">🍂 Giới Thiệu Chuyến Đi</h2>
+            <div class="desc-card card">
+              <p class="desc-text" id="tour-detail-desc">Đang tải mô tả chi tiết cung đường từ cơ sở dữ liệu hệ thống du lịch...</p>
+            </div>
+          </section>
+
+          <!-- Accordion Schedule timeline -->
+          <section class="schedule-section">
+            <h2 class="section-title">📅 Chi Tiết Lịch Trình Từng Ngày</h2>
+            
+            <div class="accordion-group" id="tour-accordion">
+              
+              <!-- Accordion item 1 -->
+              <div class="accordion-item card open">
+                <button class="accordion-trigger" aria-expanded="true" id="acc-day-1">
+                  <span>🚀 Ngày 1 | Điểm hẹn hoang sơ - Chào đón thám hiểm gia</span>
+                  <span class="acc-indicator">&#x2212;</span>
+                </button>
+                <div class="accordion-content">
+                  <p>Hưng khởi tập trung đón hành khách tại khách sạn trung tâm quận. Xe van cao cấp đưa đoàn tiến sâu vào chân thung lũng dã ngoại. Thưởng thức trà lá bản địa sấy lạnh, phổ biến nguyên tắc trekking không vết rác xanh và căng lều gỗ ven dòng suối chảy hiền hòa phẳng lặng.</p>
+                </div>
+              </div>
+
+              <!-- Accordion item 2 -->
+              <div class="accordion-item card">
+                <button class="accordion-trigger" aria-expanded="false" id="acc-day-2">
+                  <span>🧗 Ngày 2 | Thử thách đỉnh cao - Chinh phục vách đá phong rêu</span>
+                  <span class="acc-indicator">&#x2b;</span>
+                </button>
+                <div class="accordion-content">
+                  <p>Thức giấc sương mù buổi sớm đón ngọn bình minh trong trẻo. Bữa sáng thảo mộc giàu năng lượng cung cấp nhiên liệu. Hành trình trèo đèo lội suối đá vượt 10km rừng rậm hoang dã, khám phá hang động cổ đại thạch nhũ hàng triệu tuổi. Thưởng thức tiệc nướng BBQ heo bản dã chiến ngay trong đêm yên tĩnh lanh se bên ngọn lửa trại ấm áp.</p>
+                </div>
+              </div>
+
+              <!-- Accordion item 3 -->
+              <div class="accordion-item card">
+                <button class="accordion-trigger" aria-expanded="false" id="acc-day-3">
+                  <span>💧 Ngày 3 | Tắm suối mát trong - Trả phòng & Tạm biệt rừng thẳm</span>
+                  <span class="acc-indicator">&#x2b;</span>
+                </button>
+                <div class="accordion-content">
+                  <p>Chào ngày mới tĩnh lặng bằng bài tập thiền nhẹ bên dòng thác gầm réo rắt mát trong lành. Check-out hành lý thu gom sạch bách vật phẩm gây hại môi trường. Đoàn lên xe di chuyển thưởng thức bữa cơm niêu gia truyền trước khi trở lại ga tiễn, hứa hẹn chuyến đi rừng rậm tiếp theo lôi cuốn.</p>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- Customer Reviews list -->
+          <section class="reviews-section">
+            <h2 class="section-title">💬 Khách Hàng Review Gần Đây</h2>
+            
+            <div class="reviews-list">
+              <div class="review-item card">
+                <div class="review-meta">
+                  <div class="reviewer-avatar">&#129409;</div>
+                  <div>
+                    <h3 class="reviewer-name">Nguyễn Mạnh Hùng</h3>
+                    <span class="review-date">Đã đi tháng 05/2026</span>
+                  </div>
+                  <div class="stars" aria-label="5 sao">★★★★★</div>
+                </div>
+                <p class="review-comment">Cung trekking sướng vô cùng, hướng dẫn viên chu đáo can cứu hộ theo sát gót. Bữa ăn nướng sườn ngon không chịu nổi, lều sạch và mát lành. Vote 5 sao bảo tồn!</p>
+              </div>
+
+              <div class="review-item card">
+                <div class="review-meta">
+                  <div class="reviewer-avatar">&#129420;</div>
+                  <div>
+                    <h3 class="reviewer-name">Trần Mai Chi</h3>
+                    <span class="review-date">Đã đi tháng 03/2026</span>
+                  </div>
+                  <div class="stars" aria-label="4 sao">★★★★☆</div>
+                </div>
+                <p class="review-comment">Ảnh chụp bãi san hô Phú Quốc đỉnh chóp, dịch vụ tốt rước đúng hẹn. Chỉ gợn chút do thời tiết tối mưa hơi mát mẻ lều hơi ẩm một tẹo, bù lại ăn ngon xuyệt vời.</p>
+              </div>
+            </div>
+          </section>
+
+        </article>
+
+        <!-- Right Side: Sticky Checkout sidebar -->
+        <aside class="detail-sidebar" aria-label="Hộp đặt tour">
+          <div class="booking-sidebar-card card">
+            <h3>Tổng Quan Đặt Chuyến Đi</h3>
+            
+            <div class="rate-preview">
+              <span class="rate-label">Giá chuẩn Trọn Gói:</span>
+              <span class="rate-price" id="tour-detail-price">0 VND</span>
+              <span class="rate-duration">/ khách người lớn</span>
+            </div>
+
+            <div class="tour-perks">
+              <div class="perk-item">🌊 Bảo hiểm du lịch 100M VND</div>
+              <div class="perk-item">🍗 Bữa ăn sinh thái trọn gói</div>
+              <div class="perk-item">⛺ Lều bạt, túi ngủ tiêu chuẩn Mỹ</div>
+              <div class="perk-item">🎒 Bộ kit sơ cấp cứu khẩn cấp</div>
+            </div>
+
+            <div class="action-box mt-4">
+              <a href="/booking" class="btn btn-primary btn-large w-full" id="btn-book-tour">
+                Đặt Ngay Tour Này
+              </a>
+              <p class="noty-text text-center mt-2">⚡ Hỗ trợ trả góp lãi suất 0% qua thẻ tín dụng dã ngoại.</p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/tours/tour_detail/tour_detail.js"></script>
+</body>
+</html>

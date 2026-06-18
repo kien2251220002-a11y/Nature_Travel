@@ -1,0 +1,120 @@
+/* Tours Page Layout specific styles */
+
+.tours-page-wrapper {
+  padding: 3rem 0;
+}
+
+.tours-header {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.tours-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.tours-header p {
+  color: var(--color-muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Two-column layout grid */
+.tours-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .tours-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .filters-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 110px;
+  }
+
+  .tours-grid-area {
+    flex-grow: 1;
+  }
+}
+
+/* Sidebar styling */
+.filters-sidebar {
+  padding: 2rem;
+  background-color: var(--color-white);
+}
+
+.sidebar-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1.5px solid rgba(45, 106, 79, 0.1);
+}
+
+.filter-form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-actions-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Results block metadata */
+.results-metadata {
+  background-color: var(--color-white);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Pagination panel */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.page-numbers-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.page-btn {
+  border-radius: 8px;
+  min-width: 38px;
+  height: 38px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-btn.active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

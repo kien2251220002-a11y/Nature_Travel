@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NatureTravel - Tour Du Lịch Sinh Thái Thiên Nhiên Việt Nam</title>
+  <meta name="description" content="Hành trình khám phá vẻ đẹp tự nhiên hoang sơ của Việt Nam với các tour chèo kayak, leo núi và ngắm thác hùng vĩ cùng NatureTravel.">
+  
+  <!-- Open Graph Tags for SEO -->
+  <meta property="og:title" content="NatureTravel - Tour Du Lịch Sinh Thái Thiên Nhiên Việt Nam">
+  <meta property="og:description" content="Trải nghiệm du lịch sinh thái tuyệt hảo, bảo vệ môi trường, chi phí hợp lý.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80">
+  <meta property="og:type" content="website">
+
+  <!-- Style Sheets -->
+  <link rel="stylesheet" href="/shared/global.css">
+  <link rel="stylesheet" href="/pages/home/home.css">
+</head>
+<body>
+
+  <!-- Injected Sticky Header Navigation -->
+  <header id="navbar"></header>
+
+  <main>
+    <!-- Immersive Hero Banner Section -->
+    <section class="hero-section" aria-label="Chào mừng">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="hero-tagline">🌿 Khám Phá Việt Nam Đích Thực</span>
+        <h1 class="hero-title">Tìm Lại Sự Yên Bình Giữa Đại Ngàn Hoang Sơ</h1>
+        <p class="hero-subtitle">Hành trình du lịch sinh thái bản địa xanh, bảo vệ môi trường cùng đội ngũ hướng dẫn viên tận tâm.</p>
+        <div class="hero-ctas">
+          <a href="/tours" class="btn btn-primary btn-large" id="btn-hero-explore">Khám Phá Tour Ngay</a>
+          <a href="#about-section" class="btn btn-outline-white btn-large">Tìm Hiểu Thêm</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Tour Search Bar Section -->
+    <section class="search-section" aria-label="Tìm kiếm nhanh">
+      <div class="container">
+        <form class="search-form card" id="tour-search-form" method="GET" action="/tours">
+          <div class="search-grid">
+            <div class="form-group no-margin">
+              <label for="tour-search-input">Từ khóa tìm kiếm</label>
+              <input type="text" class="form-control" id="tour-search-input" name="search" placeholder="Nhập tên tour, địa danh..." aria-label="Từ khóa du lịch">
+            </div>
+            
+            <div class="form-group no-margin">
+              <label for="search-location">Địa điểm chính</label>
+              <select class="form-control" id="search-location" name="location" aria-label="Vùng du lịch">
+                <option value="">Tất cả địa điểm</option>
+                <option value="Quảng Ninh">Quảng Ninh</option>
+                <option value="Lào Cai">Lào Cai</option>
+                <option value="Lâm Đồng">Đà Lạt</option>
+                <option value="Kiên Giang">Phú Quốc</option>
+                <option value="Ninh Bình">Ninh Bình</option>
+              </select>
+            </div>
+
+            <div class="form-group no-margin">
+              <label for="search-price">Mức giá tối đa</label>
+              <select class="form-control" id="search-price" name="maxPrice" aria-label="Khoảng giá mong muốn">
+                <option value="">Không giới hạn</option>
+                <option value="1500000">Dưới 1.5 Triệu</option>
+                <option value="2500000">Dưới 2.5 Triệu</option>
+                <option value="4000000">Dưới 4.0 Triệu</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary search-btn" id="btn-search-submit">
+              <span>🔍 Tìm Kiếm</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Highlight Featured Tours (3 highest rated) -->
+    <section class="featured-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Tours Tiêu Biểu</span>
+          <h2>Trải Nghiệm Được Yêu Thích Nhất</h2>
+          <p>Nhận xét cao từ hàng ngàn khách hàng yêu thiên nhiên hoang dã.</p>
+        </div>
+
+        <div class="grid-3" id="featured-tours-grid">
+          <!-- Dynamic high-rated tours injected here by home.js -->
+          <div class="loading-spinner text-center">Đang tải danh sách tours...</div>
+        </div>
+
+        <div class="text-center mt-4">
+          <a href="/tours" class="btn btn-outline" id="btn-view-all-tours">Xem Tất Cả 12+ Tours Chi Tiết</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us (4 features) -->
+    <section class="benefits-section" id="about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-accent">Về NatureTravel</span>
+          <h2>Tại Sao Chọn Chúng Tôi?</h2>
+          <p>Mỗi bước chân bạn đi đóng góp trực tiếp vào bảo tồn thiên nhiên hoang sơ của đất nước.</p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card card">
+            <div class="benefit-icon">&#128715;</div>
+            <h3 class="benefit-title">Dịch Vụ Trọn Gói 5 Sao</h3>
+            <p class="benefit-text">Từng bữa ăn, lều ngủ dã ngoại chất lượng cao và cano dịch vụ đều được chuẩn bị chu đáo.</p>
+          </div>
+
+          <div class="benefit-card card">
+            <div class="benefit-icon">&#128101;</div>
+            <h3 class="benefit-title">Hướng Dẫn Bản Địa Chuyên Nghiệp</h3>
+            <p class="benefit-text">Đội ngũ am hiểu sâu sắc rừng sâu núi cao, được đào tạo cứu hộ quốc tế bài bản.</p>
+          </div>
+
+          <div class="benefit-card card">
+            <div class="benefit-icon">&#127793;</div>
+            <h3 class="benefit-title">Cam Kết Du Lịch Xanh</h3>
+            <p class="benefit-text">Cam kết 100% không để lại rác thải nhựa, hỗ trợ việc làm ổn định cho bà con vùng cao.</p>
+          </div>
+
+          <div class="benefit-card card">
+            <div class="benefit-icon">&#128142;</div>
+            <h3 class="benefit-title">Chi Phí Cực Tốt & Linh Hoạt</h3>
+            <p class="benefit-text">Chính sách đặt cọc linh hoạt, hoàn trả bảo lưu lên tới 100% khi thời tiết xấu biến động bất lợi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Destinations Section -->
+    <section class="destinations-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge-primary">Điểm Đến</span>
+          <h2>Những Miền Đất Hứa</h2>
+          <p>Khám phá mây phủ Hoàng Liên, hang đá Quảng Bình hay bình nguyên xanh mướt Đà Lạt.</p>
+        </div>
+
+        <div class="destinations-layout">
+          <div class="dest-item main-dest">
+            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=600&q=80" alt="Vịnh Hạ Long nước biển trong xanh" loading="lazy">
+            <div class="dest-info">
+              <h3>Vịnh Hạ Long</h3>
+              <p>Hưng vĩ nghìn đảo đá đá vôi trôi</p>
+            </div>
+          </div>
+
+          <div class="dest-item side-dest">
+            <img src="https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&w=400&q=80" alt="Suối nhỏ quanh sườn đồi Sapa" loading="lazy">
+            <div class="dest-info">
+              <h3>Sapa Mây Phủ</h3>
+              <p>Mãnh đất lúa bậc thang mờ sương</p>
+            </div>
+          </div>
+
+          <div class="dest-item side-dest">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=400&q=80" alt="Rừng thông hoang dã Đà Lạt" loading="lazy">
+            <div class="dest-info">
+              <h3>Đà Lạt Rừng Thông</h3>
+              <p>Mộng mơ, se lạnh sương chiều</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Register promotion section -->
+    <section class="cta-banner" id="contact-section">
+      <div class="container cta-banner-content text-center">
+        <h2>Nhận Bản Tin Bí Mật Về Thám Hiểm Rừng Xanh</h2>
+        <p>Để lại email để nhận những giảm giá tới 30% hàng tuần cho những khách hàng đăng ký thành viên hôm nay.</p>
+        <div class="cta-input-group">
+          <input type="email" placeholder="Địa chỉ email của bạn..." aria-label="Mail thám hiểm">
+          <button class="btn btn-accent" onclick="alert('Cám ơn bạn đã đăng ký!')">Đăng Ký Bản Tin</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Injected Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/pages/home/home.js"></script>
+</body>
+</html>
