@@ -5,7 +5,7 @@ Suite Teardown   Close Application
 Test Teardown    Capture Screenshot For Test    tour_list
 
 *** Variables ***
-${BASE_URL}    http://127.0.0.1:5173
+${BASE_URL}    http://127.0.0.1:3001
 
 *** Test Cases ***
 Tour List Page Loads

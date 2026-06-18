@@ -40,8 +40,21 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Submit reservation form
   const reserveForm = document.getElementById('booking-reserve-form');
+  const submitBtn = document.getElementById('booking-submit-btn');
   if (reserveForm) {
-    reserveForm.addEventListener('submit', (e) => handleBookingSubmit(e, tourId));
+    reserveForm.noValidate = true;
+    reserveForm.setAttribute('novalidate', 'novalidate');
+    reserveForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleBookingSubmit(e, tourId);
+    });
+  }
+
+  if (submitBtn) {
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      handleBookingSubmit(e, tourId);
+    });
   }
 });
 
@@ -115,14 +128,25 @@ async function handleBookingSubmit(e, tourId) {
 
   if (!dateInput || !adultsInput || !childrenInput) return;
 
-  const booking_date = dateInput.value;
-  const adults = parseInt(adultsInput.value, 10) || 1;
-  const children = parseInt(childrenInput.value, 10) || 0;
+  const booking_date = dateInput.value.trim();
+  const adultsValue = adultsInput.value.trim();
+  const childrenValue = childrenInput.value.trim();
+  const adults = adultsValue === '' ? null : parseInt(adultsValue, 10);
+  const children = childrenValue === '' ? null : parseInt(childrenValue, 10);
   const note = noteInput ? noteInput.value.trim() : '';
 
-  // Minimal sanity check
   if (!booking_date) {
     showToast('Vui lòng chọn ngày khởi hành thám hiểm rừng rậm.', true);
+    return;
+  }
+
+  if (adults === null || adults < 1) {
+    showToast('Vui lòng nhập số người lớn hợp lệ.', true);
+    return;
+  }
+
+  if (children === null || children < 0) {
+    showToast('Vui lòng nhập số trẻ em hợp lệ.', true);
     return;
   }
 

@@ -11,7 +11,8 @@ ${IMPLICIT_WAIT}    2s
 *** Keywords ***
 Open Application
     [Arguments]    ${url}
-    Open Browser    ${url}    ${BROWSER}    options=add_argument(--headless=new),add_argument(--no-sandbox),add_argument(--disable-dev-shm-usage),add_argument(--disable-gpu)
+    Open Browser    ${url}    ${BROWSER}
+    Set Window Size    1920    1080
     Set Selenium Implicit Wait    ${IMPLICIT_WAIT}
     Maximize Browser Window
 

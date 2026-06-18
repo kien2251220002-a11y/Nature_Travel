@@ -5,7 +5,7 @@ Suite Teardown   Close Application
 Test Teardown    Capture Screenshot For Test    home
 
 *** Variables ***
-${BASE_URL}    http://127.0.0.1:5173
+${BASE_URL}    http://127.0.0.1:3001
 
 *** Test Cases ***
 Home Page Loads
@@ -23,16 +23,16 @@ Search Tours With Query
 	[Documentation]    Search tours using a query and verify results appear.
 	Go To Home Page    ${BASE_URL}
 	Search Tours    Adventure
-	Wait Until Element Is Visible    id=featured-tours-grid    timeout=5s
+	Wait Until Element Is Visible    id=tours-grid-container    timeout=10s
 
 Search Tours With Location
 	[Documentation]    Search tours by location and verify results appear.
 	Go To Home Page    ${BASE_URL}
 	Search Tours    Adventure    Quảng Ninh
-	Wait Until Element Is Visible    id=featured-tours-grid    timeout=5s
+	Wait Until Element Is Visible    id=tours-grid-container    timeout=10s
 
 Search Tours With Price
 	[Documentation]    Search tours by maximum price and verify results appear.
 	Go To Home Page    ${BASE_URL}
 	Search Tours    Adventure    ${EMPTY}    2500000
-	Wait Until Element Is Visible    id=featured-tours-grid    timeout=5s
+	Wait Until Element Is Visible    id=tours-grid-container    timeout=10s

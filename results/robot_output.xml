@@ -1,0 +1,2298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2026-06-19T00:55:14.754468" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites" source="d:\nature-travel\tests\suites">
+<suite id="s1-s1" name="BookingTests" source="d:\nature-travel\tests\suites\BookingTests.robot">
+<kw name="Login To Booking" type="SETUP">
+<kw name="Go To Login Page" owner="LoginPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:15.311894" level="INFO">${url} = http://127.0.0.1:3001/pages/auth/login/login.html</msg>
+<var>${url}</var>
+<arg>${base_url}${LOGIN_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:15.311894" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:15.312894" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/auth/login/login.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:15.311894" elapsed="2.746248"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.058142" elapsed="0.372576"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.430718" elapsed="0.001005"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.431723" elapsed="0.032860"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:15.311894" elapsed="3.152689"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=login-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.464583" elapsed="0.070652"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-login</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.535235" elapsed="0.027113"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:15.310879" elapsed="3.251469"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=email-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.563349" elapsed="0.017209"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:18.581559" level="INFO">Typing text 'Kcao360@gmail.com' into text field 'id=email-input'.</msg>
+<arg>id=email-input</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.580558" elapsed="0.134313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=password-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.714871" elapsed="0.046682"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:18.761553" level="INFO">Typing text 'caokien' into text field 'id=password-input'.</msg>
+<arg>id=password-input</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.761553" elapsed="0.150364"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=btn-login</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.912922" elapsed="0.051812"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-login</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T00:55:18.964734" elapsed="0.296400"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:19.262133" level="INFO">Clicking element 'id=btn-login'.</msg>
+<arg>id=btn-login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:19.261134" elapsed="0.179030"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/profile</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-06-19T00:55:19.441164" elapsed="1.335576"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=navbar</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:20.776740" elapsed="0.076378"/>
+</kw>
+<arg>${TEST_USER_EMAIL}</arg>
+<arg>${TEST_USER_PASSWORD}</arg>
+<status status="PASS" start="2026-06-19T00:55:18.562348" elapsed="2.290770"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=navbar</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:20.854128" elapsed="0.016498"/>
+</kw>
+<status status="PASS" start="2026-06-19T00:55:15.310879" elapsed="5.559747"/>
+</kw>
+<test id="s1-s1-t1" name="Booking Page Loads" line="15">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:20.872631" level="INFO">${url} = http://127.0.0.1:3001/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:20.872631" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:20.872631" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/booking/booking.html?tourId=1'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:20.872631" elapsed="2.447317"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.320960" elapsed="0.390461"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.711421" elapsed="0.002021"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.713442" elapsed="0.036612"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:20.872631" elapsed="2.878436"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-reserve-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.751067" elapsed="0.073477"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.826078" elapsed="0.024314"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:20.871633" elapsed="2.979772"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.852407" elapsed="0.026765"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:23.881174" level="INFO">${test_name} = Booking Page Loads</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.880168" elapsed="0.001006"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:55:23.881174" level="INFO">${safe_test_name} = Booking_Page_Loads</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.881174" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:23.881174" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.881174" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:55:23.881174" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\booking"&gt;d:\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.881174" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:23.994735" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/booking/Booking_Page_Loads.png"&gt;&lt;img src="tests/screenshot/booking/Booking_Page_Loads.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.882174" elapsed="0.112561"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-19T00:55:23.880168" elapsed="0.114567"/>
+</kw>
+<doc>Open booking page and verify the booking form is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:20.871633" elapsed="3.123102"/>
+</test>
+<test id="s1-s1-t2" name="Fill Booking Form And Submit" line="20">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:23.997249" level="INFO">${url} = http://127.0.0.1:3001/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.997249" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:23.998247" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/booking/booking.html?tourId=1'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:23.997249" elapsed="2.607814"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:26.605063" elapsed="0.382460"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:26.987523" elapsed="0.040765"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.028288" elapsed="0.146179"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:23.997249" elapsed="3.177218"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-reserve-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.174467" elapsed="0.068378"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.243833" elapsed="0.064338"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:23.996241" elapsed="3.311930"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-19T00:55:27.310182" level="INFO">${today} = 2026-06-19</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.309182" elapsed="0.001000"/>
+</kw>
+<kw name="Fill Booking Form" owner="BookingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.311183" elapsed="0.048193"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:27.359884" level="INFO">Typing text '2026-06-19' into text field 'id=booking-date-input'.</msg>
+<arg>id=booking-date-input</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.359376" elapsed="0.215692"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=adults-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:27.575068" elapsed="0.052300"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:27.628364" level="INFO">Typing text '2' into text field 'id=adults-input'.</msg>
+<msg time="2026-06-19T00:55:28.406179" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-28.png"&gt;&lt;img src="selenium-screenshot-28.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-19T00:55:28.406687" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674198317]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>id=adults-input</arg>
+<arg>${adults}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-06-19T00:55:27.628364" elapsed="0.784358">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674198317]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=children-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.412722" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=children-input</arg>
+<arg>${children}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.412722" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-note-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.412722" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=booking-note-input</arg>
+<arg>${note}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.412722" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=booking-submit-btn</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.412722" elapsed="0.001010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=booking-submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.413732" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=summary-grand-total</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.413732" elapsed="0.000000"/>
+</kw>
+<arg>${today}</arg>
+<arg>2</arg>
+<arg>1</arg>
+<arg>Vegan meal</arg>
+<status status="FAIL" start="2026-06-19T00:55:27.310182" elapsed="1.103550">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674198317]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=summary-grand-total</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:28.413732" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:28.414704" level="INFO">${test_name} = Fill Booking Form And Submit</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.414704" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:55:28.414704" level="INFO">${safe_test_name} = Fill_Booking_Form_And_Submit</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.414704" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:28.416210" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.414704" elapsed="0.001506"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:55:28.418064" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\booking"&gt;d:\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.418064" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:28.638099" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/booking/Fill_Booking_Form_And_Submit.png"&gt;&lt;img src="tests/screenshot/booking/Fill_Booking_Form_And_Submit.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.419076" elapsed="0.219023"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-19T00:55:28.414704" elapsed="0.223395"/>
+</kw>
+<doc>Open booking page, fill the form and verify summary updates.</doc>
+<status status="FAIL" start="2026-06-19T00:55:23.996241" elapsed="4.641858">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674198317]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</test>
+<test id="s1-s1-t3" name="Booking Without Date Shows Error" line="27">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:28.641262" level="INFO">${url} = http://127.0.0.1:3001/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.640249" elapsed="0.001013"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:28.642263" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/booking/booking.html?tourId=1'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:28.641262" elapsed="3.370603"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.011865" elapsed="0.397850"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.409715" elapsed="0.006008"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.415723" elapsed="0.044820"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:28.641262" elapsed="3.819281"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-reserve-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.460543" elapsed="0.037627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.499174" elapsed="0.017848"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:28.640249" elapsed="3.878274"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:32.518523" level="INFO">Typing text '2' into text field 'id=adults-input'.</msg>
+<arg>id=adults-input</arg>
+<arg>2</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.518523" elapsed="0.139584"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:32.658107" level="INFO">Typing text '1' into text field 'id=children-input'.</msg>
+<arg>id=children-input</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:32.658107" elapsed="0.113184"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:32.774287" level="INFO">Clicking element 'id=booking-submit-btn'.</msg>
+<msg time="2026-06-19T00:55:33.691015" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-19T00:55:33.692015" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674195eb1]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>id=booking-submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-06-19T00:55:32.773302" elapsed="0.919712">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674195eb1]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=toast-notification</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:33.693014" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:33.694068" level="INFO">${test_name} = Booking Without Date Shows Error</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.694068" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:55:33.694068" level="INFO">${safe_test_name} = Booking_Without_Date_Shows_Error</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.694068" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:33.695084" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.694068" elapsed="0.001016"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:55:33.695084" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\booking"&gt;d:\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.695084" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:33.910157" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/booking/Booking_Without_Date_Shows_Error.png"&gt;&lt;img src="tests/screenshot/booking/Booking_Without_Date_Shows_Error.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.695084" elapsed="0.215073"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-19T00:55:33.694068" elapsed="0.216089"/>
+</kw>
+<doc>Verify booking validation when date is missing.</doc>
+<status status="FAIL" start="2026-06-19T00:55:28.639099" elapsed="5.271058">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a3e90]
+	chromedriver!(No symbol) [0x7ff674195eb1]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</test>
+<test id="s1-s1-t4" name="Booking Without Adults Shows Error" line="35">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:33.911163" level="INFO">${url} = http://127.0.0.1:3001/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.911163" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:33.912157" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/booking/booking.html?tourId=1'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:33.912157" elapsed="1.883871"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:35.796569" elapsed="1.048454"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:36.846020" elapsed="0.010893"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:36.856913" elapsed="0.069163"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:33.912157" elapsed="3.013919"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-reserve-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:36.926589" elapsed="0.070446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:36.997035" elapsed="0.070596"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:33.911163" elapsed="3.156468"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-19T00:55:37.072779" level="INFO">${today} = 2026-06-19</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-19T00:55:37.069979" elapsed="0.002800"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:37.078328" level="INFO">Typing text '2026-06-19' into text field 'id=booking-date-input'.</msg>
+<arg>id=booking-date-input</arg>
+<arg>${today}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:37.073777" elapsed="0.176592"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:37.251385" level="INFO">Typing text '1' into text field 'id=children-input'.</msg>
+<arg>id=children-input</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:37.251385" elapsed="0.162064"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:37.414961" level="INFO">Clicking element 'id=booking-submit-btn'.</msg>
+<arg>id=booking-submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:37.414961" elapsed="0.899988"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:38.328585" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<msg time="2026-06-19T00:55:38.330559" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>id=toast-notification</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-06-19T00:55:38.315957" elapsed="0.021402">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:38.342632" level="INFO">${test_name} = Booking Without Adults Shows Error</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:38.341392" elapsed="0.001240"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:55:38.342632" level="INFO">${safe_test_name} = Booking_Without_Adults_Shows_Error</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:55:38.342632" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:38.343724" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:38.342632" elapsed="0.001092"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:55:38.343724" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\booking"&gt;d:\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:55:38.343724" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:38.348085" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<msg time="2026-06-19T00:55:38.349085" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" start="2026-06-19T00:55:38.343724" elapsed="0.008115">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<arg>booking</arg>
+<status status="FAIL" start="2026-06-19T00:55:38.341392" elapsed="0.011457">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<doc>Verify booking validation when adult count is missing.</doc>
+<status status="FAIL" start="2026-06-19T00:55:33.911163" elapsed="4.441686">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+
+
+Also teardown failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</test>
+<test id="s1-s1-t5" name="Booking With Children And Note Shows Summary" line="44">
+<kw name="Go To Booking Page" owner="BookingPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:38.359385" level="INFO">${url} = http://127.0.0.1:3001/pages/booking/booking.html?tourId=1</msg>
+<var>${url}</var>
+<arg>${base_url}${BOOKING_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:38.358376" elapsed="0.001009"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:38.360407" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/booking/booking.html?tourId=1'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:38.360407" elapsed="2.779330"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.139737" elapsed="0.373710"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.514447" elapsed="0.012706"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.528549" elapsed="0.043822"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:38.359385" elapsed="3.212986"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-reserve-form</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.572371" elapsed="0.073517"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.645888" elapsed="0.018335"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:38.357376" elapsed="3.306847"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2026-06-19T00:55:41.665221" level="INFO">${today} = 2026-06-19</msg>
+<var>${today}</var>
+<arg>result_format=%Y-%m-%d</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.664223" elapsed="0.000998"/>
+</kw>
+<kw name="Fill Booking Form" owner="BookingPage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-date-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.666221" elapsed="0.016024"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:41.683245" level="INFO">Typing text '2026-06-19' into text field 'id=booking-date-input'.</msg>
+<arg>id=booking-date-input</arg>
+<arg>${date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.682245" elapsed="0.105929"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=adults-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.790193" elapsed="0.033527"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:41.823720" level="INFO">Typing text '1' into text field 'id=adults-input'.</msg>
+<arg>id=adults-input</arg>
+<arg>${adults}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.823720" elapsed="0.141305"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=children-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.965025" elapsed="0.032689"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:41.998713" level="INFO">Typing text '2' into text field 'id=children-input'.</msg>
+<arg>id=children-input</arg>
+<arg>${children}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:55:41.997714" elapsed="0.131368"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=booking-note-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:42.130090" elapsed="0.050805"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:42.180895" level="INFO">Typing text 'Need baby seat' into text field 'id=booking-note-input'.</msg>
+<msg time="2026-06-19T00:55:42.965939" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-30.png"&gt;&lt;img src="selenium-screenshot-30.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-19T00:55:42.967206" level="FAIL">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a2b80]
+	chromedriver!(No symbol) [0x7ff6741a2c77]
+	chromedriver!(No symbol) [0x7ff67419988a]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>id=booking-note-input</arg>
+<arg>${note}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-06-19T00:55:42.180895" elapsed="0.787596">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a2b80]
+	chromedriver!(No symbol) [0x7ff6741a2c77]
+	chromedriver!(No symbol) [0x7ff67419988a]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>id=booking-submit-btn</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:42.969512" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=booking-submit-btn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:42.969512" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=summary-grand-total</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:42.969512" elapsed="0.000000"/>
+</kw>
+<arg>${today}</arg>
+<arg>1</arg>
+<arg>2</arg>
+<arg>Need baby seat</arg>
+<status status="FAIL" start="2026-06-19T00:55:41.665221" elapsed="1.305276">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a2b80]
+	chromedriver!(No symbol) [0x7ff6741a2c77]
+	chromedriver!(No symbol) [0x7ff67419988a]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=summary-grand-total</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:55:42.970497" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:42.971498" level="INFO">${test_name} = Booking With Children And Note Shows Summary</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:42.971498" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:55:42.972499" level="INFO">${safe_test_name} = Booking_With_Children_And_Note_Shows_Summary</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:55:42.971498" elapsed="0.001001"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:42.972499" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/booking</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:42.972499" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:55:42.973514" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\booking"&gt;d:\nature-travel\tests\screenshot\booking&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:55:42.972499" elapsed="0.001015"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:43.233454" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/booking/Booking_With_Children_And_Note_Shows_Summary.png"&gt;&lt;img src="tests/screenshot/booking/Booking_With_Children_And_Note_Shows_Summary.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:55:42.973514" elapsed="0.259940"/>
+</kw>
+<arg>booking</arg>
+<status status="PASS" start="2026-06-19T00:55:42.971498" elapsed="0.261956"/>
+</kw>
+<doc>Fill booking form with children and note, then verify summary updates.</doc>
+<status status="FAIL" start="2026-06-19T00:55:38.355851" elapsed="4.878606">StaleElementReferenceException: Message: stale element reference: stale element not found
+  (Session info: chrome=149.0.7827.103); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67415f63d]
+	chromedriver!(No symbol) [0x7ff67415dd40]
+	chromedriver!(No symbol) [0x7ff67415050b]
+	chromedriver!(No symbol) [0x7ff67414e30e]
+	chromedriver!(No symbol) [0x7ff674152875]
+	chromedriver!(No symbol) [0x7ff67415293f]
+	chromedriver!(No symbol) [0x7ff6741a2b80]
+	chromedriver!(No symbol) [0x7ff6741a2c77]
+	chromedriver!(No symbol) [0x7ff67419988a]
+	chromedriver!(No symbol) [0x7ff6741ca3ca]
+	chromedriver!(No symbol) [0x7ff6741957c6]
+	chromedriver!(No symbol) [0x7ff6741ef39b]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</test>
+<kw name="Close Application" owner="common_keywords" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-06-19T00:55:43.235968" elapsed="13.107911"/>
+</kw>
+<status status="PASS" start="2026-06-19T00:55:43.235968" elapsed="13.108812"/>
+</kw>
+<doc>Booking tests (POM)</doc>
+<status status="FAIL" start="2026-06-19T00:55:14.812474" elapsed="41.532306"/>
+</suite>
+<suite id="s1-s2" name="HomeTests" source="d:\nature-travel\tests\suites\HomeTests.robot">
+<test id="s1-s2-t1" name="Home Page Loads" line="11">
+<kw name="Go To Home Page" owner="HomePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:56.355821" level="INFO">${url} = http://127.0.0.1:3001/pages/home/home.html</msg>
+<var>${url}</var>
+<arg>${base_url}${HOME_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:56.354317" elapsed="0.001504"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:56.355821" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/home/home.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:56.355821" elapsed="2.273042"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:55:58.629862" elapsed="0.373549"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.003411" elapsed="0.003535"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.006946" elapsed="0.039290"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:56.355821" elapsed="2.690415"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-hero-explore</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.046236" elapsed="0.053804"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.100040" elapsed="0.017808"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:56.354317" elapsed="2.763531"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.118856" elapsed="0.025309"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:59.145672" level="INFO">${test_name} = Home Page Loads</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.145672" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:55:59.146684" level="INFO">${safe_test_name} = Home_Page_Loads</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.146684" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:59.146684" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/home</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.146684" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:55:59.147682" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\home"&gt;d:\nature-travel\tests\screenshot\home&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.147682" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:59.839813" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/home/Home_Page_Loads.png"&gt;&lt;img src="tests/screenshot/home/Home_Page_Loads.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.147682" elapsed="0.693138"/>
+</kw>
+<arg>home</arg>
+<status status="PASS" start="2026-06-19T00:55:59.145672" elapsed="0.696154"/>
+</kw>
+<doc>Open home page and verify the search bar is visible.</doc>
+<status status="PASS" start="2026-06-19T00:55:56.354317" elapsed="3.487509"/>
+</test>
+<test id="s1-s2-t2" name="Hero Explore Navigates To Tours" line="16">
+<kw name="Go To Home Page" owner="HomePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:55:59.843819" level="INFO">${url} = http://127.0.0.1:3001/pages/home/home.html</msg>
+<var>${url}</var>
+<arg>${base_url}${HOME_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.843819" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:55:59.844810" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/home/home.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.844810" elapsed="2.760198"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:56:02.605008" elapsed="0.369931"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:56:02.976008" elapsed="0.003615"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:56:02.980627" elapsed="0.049459"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:55:59.844810" elapsed="3.185276"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-hero-explore</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.030086" elapsed="0.026949"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.057035" elapsed="0.030570"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:55:59.843819" elapsed="3.244782"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:03.091633" level="INFO">Clicking element 'id=btn-hero-explore'.</msg>
+<arg>id=btn-hero-explore</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.089612" elapsed="0.252562"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.342174" elapsed="0.066478"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:03.410651" level="INFO">${test_name} = Hero Explore Navigates To Tours</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.410651" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:56:03.410651" level="INFO">${safe_test_name} = Hero_Explore_Navigates_To_Tours</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.410651" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:03.411655" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/home</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.410651" elapsed="0.001004"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:56:03.411655" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\home"&gt;d:\nature-travel\tests\screenshot\home&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.411655" elapsed="0.000996"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:03.694565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/home/Hero_Explore_Navigates_To_Tours.png"&gt;&lt;img src="tests/screenshot/home/Hero_Explore_Navigates_To_Tours.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.412651" elapsed="0.281914"/>
+</kw>
+<arg>home</arg>
+<status status="PASS" start="2026-06-19T00:56:03.409655" elapsed="0.284910"/>
+</kw>
+<doc>From home, click explore and verify tours list loads.</doc>
+<status status="PASS" start="2026-06-19T00:55:59.842814" elapsed="3.853257"/>
+</test>
+<test id="s1-s2-t3" name="Search Tours With Query" line="22">
+<kw name="Go To Home Page" owner="HomePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:03.702185" level="INFO">${url} = http://127.0.0.1:3001/pages/home/home.html</msg>
+<var>${url}</var>
+<arg>${base_url}${HOME_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.698158" elapsed="0.004027"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:03.703192" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/home/home.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.703192" elapsed="2.462730"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.165922" elapsed="0.367709"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.534657" elapsed="0.004528"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.540262" elapsed="0.038894"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:56:03.702185" elapsed="2.876971"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-hero-explore</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.580233" elapsed="0.041725"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.621958" elapsed="0.051740"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:56:03.697079" elapsed="2.977538"/>
+</kw>
+<kw name="Search Tours" owner="HomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.680285" elapsed="0.042670"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:06.724963" level="INFO">Typing text 'Adventure' into text field 'id=tour-search-input'.</msg>
+<arg>id=tour-search-input</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.723961" elapsed="0.098575"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=search-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.822536" elapsed="0.001023"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=search-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.823559" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-search-submit</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T00:56:06.823559" elapsed="0.287381"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:07.110940" level="INFO">Clicking element 'id=btn-search-submit'.</msg>
+<arg>id=btn-search-submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.110940" elapsed="0.113726"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<arg>/tours</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.224666" elapsed="0.048402"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.274068" elapsed="0.030238"/>
+</kw>
+<arg>Adventure</arg>
+<status status="PASS" start="2026-06-19T00:56:06.677168" elapsed="0.627138"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.305812" elapsed="0.021092"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:07.328391" level="INFO">${test_name} = Search Tours With Query</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.328391" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:56:07.328391" level="INFO">${safe_test_name} = Search_Tours_With_Query</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.328391" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:07.329407" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/home</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.329407" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:56:07.329407" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\home"&gt;d:\nature-travel\tests\screenshot\home&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.329407" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:07.468748" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot/home/Search_Tours_With_Query.png"&gt;&lt;img src="tests/screenshot/home/Search_Tours_With_Query.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.329407" elapsed="0.140619"/>
+</kw>
+<arg>home</arg>
+<status status="PASS" start="2026-06-19T00:56:07.328391" elapsed="0.141635"/>
+</kw>
+<doc>Search tours using a query and verify results appear.</doc>
+<status status="PASS" start="2026-06-19T00:56:03.697079" elapsed="3.772947"/>
+</test>
+<test id="s1-s2-t4" name="Search Tours With Location" line="28">
+<kw name="Go To Home Page" owner="HomePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:07.473048" level="INFO">${url} = http://127.0.0.1:3001/pages/home/home.html</msg>
+<var>${url}</var>
+<arg>${base_url}${HOME_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.472057" elapsed="0.000991"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:07.474047" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/home/home.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:56:07.474047" elapsed="1.634936"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:56:09.108983" elapsed="1.047828"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.156811" elapsed="0.010866"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.167677" elapsed="0.036843"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:56:07.473048" elapsed="2.731472"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-hero-explore</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.204520" elapsed="0.031654"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:10.502255" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<msg time="2026-06-19T00:56:10.503256" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2026-06-19T00:56:10.237183" elapsed="0.267073">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="FAIL" start="2026-06-19T00:56:07.472057" elapsed="3.032199">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<kw name="Search Tours" owner="HomePage">
+<arg>Adventure</arg>
+<arg>Quảng Ninh</arg>
+<status status="NOT RUN" start="2026-06-19T00:56:10.505766" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:56:10.505766" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:10.507256" level="INFO">${test_name} = Search Tours With Location</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.507256" elapsed="0.000000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:56:10.508268" level="INFO">${safe_test_name} = Search_Tours_With_Location</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.507256" elapsed="0.001012"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:10.508268" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/home</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.508268" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:56:10.509626" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\home"&gt;d:\nature-travel\tests\screenshot\home&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.508268" elapsed="0.001358"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:10.520146" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<msg time="2026-06-19T00:56:10.525992" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" start="2026-06-19T00:56:10.509626" elapsed="0.018379">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<arg>home</arg>
+<status status="FAIL" start="2026-06-19T00:56:10.505766" elapsed="0.023238">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</kw>
+<doc>Search tours by location and verify results appear.</doc>
+<status status="FAIL" start="2026-06-19T00:56:07.471058" elapsed="3.059946">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+
+
+Also teardown failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</status>
+</test>
+<test id="s1-s2-t5" name="Search Tours With Price" line="34">
+<kw name="Go To Home Page" owner="HomePage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:10.540111" level="INFO">${url} = http://127.0.0.1:3001/pages/home/home.html</msg>
+<var>${url}</var>
+<arg>${base_url}${HOME_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.539111" elapsed="0.001000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:10.541112" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/home/home.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T00:56:10.541112" elapsed="2.287164"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T00:56:12.828276" elapsed="0.392803"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.221079" elapsed="0.003016"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.224095" elapsed="0.040772"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T00:56:10.540111" elapsed="2.724756"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-hero-explore</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.264867" elapsed="0.065167"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.330034" elapsed="0.041230"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T00:56:10.539111" elapsed="2.833142"/>
+</kw>
+<kw name="Search Tours" owner="HomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tour-search-input</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.378844" elapsed="0.031394"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:13.412224" level="INFO">Typing text 'Adventure' into text field 'id=tour-search-input'.</msg>
+<arg>id=tour-search-input</arg>
+<arg>${query}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.412224" elapsed="0.137176"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=search-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.549400" elapsed="0.002009"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:13.553667" level="INFO">Selecting options from selection list 'id=search-price' by value 2500000.</msg>
+<arg>id=search-price</arg>
+<arg>${price}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.553667" elapsed="0.107106"/>
+</kw>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=search-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.552405" elapsed="0.108368"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-search-submit</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.661773" elapsed="0.296668"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:13.959442" level="INFO">Clicking element 'id=btn-search-submit'.</msg>
+<arg>id=btn-search-submit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-06-19T00:56:13.958441" elapsed="0.103870"/>
+</kw>
+<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:14.177548" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<msg time="2026-06-19T00:56:14.178558" level="FAIL">TypeError: argument of type 'NoneType' is not iterable</msg>
+<arg>/tours</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="FAIL" start="2026-06-19T00:56:14.062311" elapsed="0.117247">TypeError: argument of type 'NoneType' is not iterable</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:56:14.180559" elapsed="0.000000"/>
+</kw>
+<arg>Adventure</arg>
+<arg>${EMPTY}</arg>
+<arg>2500000</arg>
+<status status="FAIL" start="2026-06-19T00:56:13.374269" elapsed="0.806290">TypeError: argument of type 'NoneType' is not iterable</status>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-06-19T00:56:14.184808" elapsed="0.001520"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:14.197169" level="INFO">${test_name} = Search Tours With Price</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:14.196159" elapsed="0.001010"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T00:56:14.197169" level="INFO">${safe_test_name} = Search_Tours_With_Price</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T00:56:14.197169" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T00:56:14.198179" level="INFO">${directory} = d:\nature-travel\tests\resources/../screenshot/home</msg>
+<var>${directory}</var>
+<arg>d:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T00:56:14.198179" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T00:56:14.199181" level="INFO" html="true">Directory '&lt;a href="file://d:\nature-travel\tests\screenshot\home"&gt;d:\nature-travel\tests\screenshot\home&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T00:56:14.199181" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T00:56:14.211392" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<msg time="2026-06-19T00:56:14.213651" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]
+</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="FAIL" start="2026-06-19T00:56:14.199181" elapsed="0.015480">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=149.0.7827.103)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff674603fa5+14925]
+	chromedriver!GetHandleVerifier [0x7ff674604000+14980]
+	chromedriver!(No symbol) [0x7ff67414793d]
+	chromedriver!(No symbol) [0x7ff67411e362]
+	chromedriver!(No symbol) [0x7ff6741d1846]
+	chromedriver!(No symbol) [0x7ff6741eec82]
+	chromedriver!(No symbol) [0x7ff67419401c]
+	chromedriver!(No symbol) [0x7ff674194f43]
+	chromedriver!GetHandleVerifier [0x7ff674be7591+5f7f11]
+	chromedriver!GetHandleVerifier [0x7ff674be1902+5f2282]
+	chromedriver!GetHandleVerifier [0x7ff674c07115+617a95]
+	chromedriver!GetHandleVerifier [0x7ff674621dce+3274e]
+	chromedriver!GetHandleVerifier [0x7ff67462a82c+3b1ac]
+	chromedriver!GetHandleVerifier [0x7ff67460d744+1e0c4]
+	chromedriver!GetHandleVerifier [0x7ff67460d8d4+1e254]
+	chromedriver!GetHandleVerifier [0x7ff6745f1447+1dc7]
+	KERNEL32!BaseThreadInitThunk [0x7ffcbd3de957+17]
+	ntdll!RtlUserThreadStart [0x7ffcbde27c1c+2c]

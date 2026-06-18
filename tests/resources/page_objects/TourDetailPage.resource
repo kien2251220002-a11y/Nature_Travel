@@ -4,7 +4,7 @@ Resource    ../common_keywords.resource
 
 *** Variables ***
 ${TOUR_DETAIL_PATH}    /pages/tours/tour_detail/tour_detail.html
-${DEFAULT_BASE_URL}    http://127.0.0.1:5173
+${DEFAULT_BASE_URL}    http://127.0.0.1:3001
 
 *** Keywords ***
 Go To Tour Detail Page

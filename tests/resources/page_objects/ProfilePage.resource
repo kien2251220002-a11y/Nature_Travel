@@ -3,7 +3,7 @@ Resource    ../common_keywords.resource
 
 *** Variables ***
 ${PROFILE_PATH}    /pages/profile/profile.html
-${DEFAULT_BASE_URL}    http://127.0.0.1:5173
+${DEFAULT_BASE_URL}    http://127.0.0.1:3001
 
 *** Keywords ***
 Go To Profile Page

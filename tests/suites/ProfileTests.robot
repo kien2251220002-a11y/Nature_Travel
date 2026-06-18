@@ -6,9 +6,9 @@ Suite Teardown    Close Application
 Test Teardown     Capture Screenshot For Test    profile
 
 *** Variables ***
-${BASE_URL}    http://127.0.0.1:5173
-${TEST_USER_EMAIL}    testuser@example.com
-${TEST_USER_PASSWORD}    secret123
+${BASE_URL}    http://127.0.0.1:3001
+${TEST_USER_EMAIL}    Kcao360@gmail.com
+${TEST_USER_PASSWORD}    caokien
 
 *** Test Cases ***
 Profile Page Loads

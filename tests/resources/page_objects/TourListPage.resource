@@ -3,7 +3,7 @@ Resource    ../common_keywords.resource
 
 *** Variables ***
 ${TOURS_PATH}    /pages/tours/tour_list/tour_list.html
-${DEFAULT_BASE_URL}    http://127.0.0.1:5173
+${DEFAULT_BASE_URL}    http://127.0.0.1:3001
 
 *** Keywords ***
 Go To Tours List
