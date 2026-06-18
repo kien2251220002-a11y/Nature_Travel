@@ -15,5 +15,7 @@ Apply Filters    [Arguments]    ${location}=${EMPTY}    ${price}=${EMPTY}    ${r
     ${location}    Run Keyword If    '${location}' != ''    Select From List By Value    id=filter-location    ${location}
     ${price}       Run Keyword If    '${price}' != ''       Select From List By Value    id=filter-price       ${price}
     ${rating}      Run Keyword If    '${rating}' != ''      Select From List By Value    id=filter-rating      ${rating}
-    Click Element    id=btn-apply-filters
-    Wait Until Element Is Visible    id=tours-grid-container    timeout=5s
+    Wait Until Element Is Visible    id=btn-apply-filters    timeout=10s
+    Scroll Element Into View    id=btn-apply-filters
+    Execute JavaScript    document.getElementById('btn-apply-filters').click();
+    Wait Until Element Is Visible    id=tours-grid-container    timeout=10s

@@ -1,655 +1,1018 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2026-06-19T01:18:13.516821" rpa="false" schemaversion="5">
-<suite id="s1" name="LoginTests" source="D:\nature-travel\tests\suites\LoginTests.robot">
-<test id="s1-t1" name="Successful Login" line="13">
-<kw name="Go To Login Page" owner="LoginPage">
+<robot generator="Robot 7.2.2 (Python 3.12.6 on win32)" generated="2026-06-19T02:38:51.335072" rpa="false" schemaversion="5">
+<suite id="s1" name="TourListTests" source="D:\nature-travel\tests\suites\TourListTests.robot">
+<test id="s1-t1" name="Tour List Page Loads" line="11">
+<kw name="Go To Tours List" owner="TourListPage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:13.769240" level="INFO">${url} = http://127.0.0.1:3001/pages/auth/login/login.html</msg>
+<msg time="2026-06-19T02:38:51.586046" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
 <var>${url}</var>
-<arg>${base_url}${LOGIN_PATH}</arg>
+<arg>${base_url}${TOURS_PATH}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:13.769240" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:38:51.586046" elapsed="0.000000"/>
 </kw>
 <kw name="Open Application" owner="common_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:13.770239" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/auth/login/login.html'.</msg>
+<msg time="2026-06-19T02:38:51.587046" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
 <arg>${url}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-19T01:18:13.770239" elapsed="2.314965"/>
+<status status="PASS" start="2026-06-19T02:38:51.587046" elapsed="2.034434"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.085204" elapsed="0.373642"/>
+<status status="PASS" start="2026-06-19T02:38:53.621480" elapsed="0.377296"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>${IMPLICIT_WAIT}</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.459842" elapsed="0.003747"/>
+<status status="PASS" start="2026-06-19T02:38:53.998776" elapsed="0.003038"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.463589" elapsed="0.045775"/>
+<status status="PASS" start="2026-06-19T02:38:54.001814" elapsed="0.025018"/>
 </kw>
 <arg>${url}</arg>
-<status status="PASS" start="2026-06-19T01:18:13.769240" elapsed="2.740124"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-form</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.509364" elapsed="0.044920"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.554284" elapsed="0.033212"/>
+<status status="PASS" start="2026-06-19T02:38:51.586046" elapsed="2.440786"/>
 </kw>
 <arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-06-19T01:18:13.768239" elapsed="2.820262"/>
-</kw>
-<kw name="Login With Credentials" owner="LoginPage">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=email-input</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.589498" elapsed="0.018744"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:16.611765" level="INFO">Typing text 'Kcao360@gmail.com' into text field 'id=email-input'.</msg>
-<arg>id=email-input</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.609262" elapsed="0.093442"/>
+<status status="PASS" start="2026-06-19T02:38:51.586046" elapsed="2.440786"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=password-input</arg>
+<arg>id=tours-grid-container</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.027828" elapsed="0.031655"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:38:54.061493" level="INFO">${test_name} = Tour List Page Loads</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.060498" elapsed="0.000995"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T02:38:54.061493" level="INFO">${safe_test_name} = Tour_List_Page_Loads</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.061493" elapsed="0.001015"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:38:54.064005" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/tour_list</msg>
+<var>${directory}</var>
+<arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.062508" elapsed="0.001497"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T02:38:54.066012" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\tour_list"&gt;D:\nature-travel\tests\screenshot\tour_list&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.065018" elapsed="0.000994"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:38:54.225090" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/tour_list/Tour_List_Page_Loads.png"&gt;&lt;img src="../screenshot/tour_list/Tour_List_Page_Loads.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.066012" elapsed="0.159078"/>
+</kw>
+<arg>tour_list</arg>
+<status status="PASS" start="2026-06-19T02:38:54.060498" elapsed="0.165620"/>
+</kw>
+<doc>Open tour list page and verify the tours grid is visible.</doc>
+<status status="PASS" start="2026-06-19T02:38:51.585054" elapsed="2.641064"/>
+</test>
+<test id="s1-t2" name="Apply Filters Shows Results" line="16">
+<kw name="Go To Tours List" owner="TourListPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:38:54.229039" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
+<var>${url}</var>
+<arg>${base_url}${TOURS_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.229039" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:38:54.231057" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.230081" elapsed="2.273010"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T02:38:56.503599" elapsed="0.372050"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T02:38:56.875649" elapsed="0.002029"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T02:38:56.877678" elapsed="0.033257"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T02:38:54.229039" elapsed="2.682897"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T02:38:54.228152" elapsed="2.683784"/>
+</kw>
+<kw name="Apply Filters" owner="TourListPage">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:38:56.912939" level="INFO">Selecting options from selection list 'id=filter-location' by value Quảng Ninh.</msg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:38:56.912939" elapsed="0.094301"/>
+</kw>
+<msg time="2026-06-19T02:38:57.007240" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:38:56.912939" elapsed="0.094301"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:38:57.008242" level="INFO">Selecting options from selection list 'id=filter-price' by value 2500000.</msg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:38:57.008242" elapsed="0.118615"/>
+</kw>
+<msg time="2026-06-19T02:38:57.127888" level="INFO">${price} = None</msg>
+<var>${price}</var>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:38:57.008242" elapsed="0.119646"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:38:57.127888" level="INFO">Selecting options from selection list 'id=filter-rating' by value 4.6.</msg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:38:57.127888" elapsed="0.088854"/>
+</kw>
+<msg time="2026-06-19T02:38:57.217743" level="INFO">${rating} = None</msg>
+<var>${rating}</var>
+<arg>'${rating}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:38:57.127888" elapsed="0.089855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.702704" elapsed="0.019830"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:16.723536" level="INFO">Typing text 'caokien' into text field 'id=password-input'.</msg>
-<arg>id=password-input</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.723536" elapsed="0.086627"/>
-</kw>
-<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.811172" elapsed="0.029829"/>
+<status status="PASS" start="2026-06-19T02:38:57.217743" elapsed="0.024611"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
+<arg>id=btn-apply-filters</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-06-19T01:18:16.842262" elapsed="0.268983"/>
+<status status="PASS" start="2026-06-19T02:38:57.243881" elapsed="0.309729"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:17.111761" level="INFO">Clicking element 'id=btn-login'.</msg>
-<arg>id=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:17.111245" elapsed="0.065962"/>
-</kw>
-<kw name="Wait Until Location Contains" owner="SeleniumLibrary">
-<arg>/profile</arg>
-<arg>timeout=15s</arg>
-<doc>Waits until the current URL contains ``expected``.</doc>
-<status status="PASS" start="2026-06-19T01:18:17.177207" elapsed="1.293934"/>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:38:57.554665" level="INFO">Executing JavaScript:
+document.getElementById('btn-apply-filters').click();
+Without any arguments.</msg>
+<arg>document.getElementById('btn-apply-filters').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-06-19T02:38:57.554665" elapsed="0.023532"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=navbar</arg>
+<arg>id=tours-grid-container</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.472153" elapsed="0.092997"/>
+<status status="PASS" start="2026-06-19T02:38:57.578197" elapsed="0.031117"/>
 </kw>
-<arg>${TEST_USER_EMAIL}</arg>
-<arg>${TEST_USER_PASSWORD}</arg>
-<status status="PASS" start="2026-06-19T01:18:16.588501" elapsed="1.976649"/>
+<arg>Quảng Ninh</arg>
+<arg>2500000</arg>
+<arg>4.6</arg>
+<status status="PASS" start="2026-06-19T02:38:56.911936" elapsed="0.697378"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=navbar</arg>
+<arg>id=tours-grid-container</arg>
 <arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.565150" elapsed="0.015732"/>
+<status status="PASS" start="2026-06-19T02:38:57.610434" elapsed="0.025669"/>
 </kw>
 <kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:18.583762" level="INFO">${test_name} = Successful Login</msg>
+<msg time="2026-06-19T02:38:57.638114" level="INFO">${test_name} = Apply Filters Shows Results</msg>
 <var>${test_name}</var>
 <arg>${TEST NAME}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.582748" elapsed="0.001014"/>
+<status status="PASS" start="2026-06-19T02:38:57.638114" elapsed="0.000000"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2026-06-19T01:18:18.584762" level="INFO">${safe_test_name} = Successful_Login</msg>
+<msg time="2026-06-19T02:38:57.638114" level="INFO">${safe_test_name} = Apply_Filters_Shows_Results</msg>
 <var>${safe_test_name}</var>
 <arg>${test_name}</arg>
 <arg>${SPACE}</arg>
 <arg>_</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.583762" elapsed="0.002003"/>
+<status status="PASS" start="2026-06-19T02:38:57.638114" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:18.586762" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/login</msg>
+<msg time="2026-06-19T02:38:57.639173" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/tour_list</msg>
 <var>${directory}</var>
 <arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.585765" elapsed="0.000997"/>
+<status status="PASS" start="2026-06-19T02:38:57.638114" elapsed="0.001059"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2026-06-19T01:18:18.587758" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\login"&gt;D:\nature-travel\tests\screenshot\login&lt;/a&gt;' already exists.</msg>
+<msg time="2026-06-19T02:38:57.639173" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\tour_list"&gt;D:\nature-travel\tests\screenshot\tour_list&lt;/a&gt;' already exists.</msg>
 <arg>${directory}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.586762" elapsed="0.000996"/>
+<status status="PASS" start="2026-06-19T02:38:57.639173" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:18.714340" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/login/Successful_Login.png"&gt;&lt;img src="../screenshot/login/Successful_Login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-19T02:38:57.793845" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/tour_list/Apply_Filters_Shows_Results.png"&gt;&lt;img src="../screenshot/tour_list/Apply_Filters_Shows_Results.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${directory}/${safe_test_name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.587758" elapsed="0.126582"/>
+<status status="PASS" start="2026-06-19T02:38:57.640110" elapsed="0.153735"/>
 </kw>
-<arg>login</arg>
-<status status="PASS" start="2026-06-19T01:18:18.582234" elapsed="0.132106"/>
+<arg>tour_list</arg>
+<status status="PASS" start="2026-06-19T02:38:57.637111" elapsed="0.156734"/>
 </kw>
-<doc>Open login page and perform successful login; verify navbar shown.</doc>
-<status status="PASS" start="2026-06-19T01:18:13.768239" elapsed="4.947229"/>
+<doc>Open tours list, apply filters and verify grid updates.</doc>
+<status status="PASS" start="2026-06-19T02:38:54.227137" elapsed="3.566708"/>
 </test>
-<test id="s1-t2" name="Invalid Login With Wrong Password" line="19">
-<kw name="Go To Login Page" owner="LoginPage">
+<test id="s1-t3" name="Filter Tours Data Driven" line="22">
+<kw name="Filter Tour Example">
+<kw name="Go To Tours List" owner="TourListPage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:18.718343" level="INFO">${url} = http://127.0.0.1:3001/pages/auth/login/login.html</msg>
+<msg time="2026-06-19T02:38:57.801923" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
 <var>${url}</var>
-<arg>${base_url}${LOGIN_PATH}</arg>
+<arg>${base_url}${TOURS_PATH}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.718343" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:38:57.799918" elapsed="0.002997"/>
 </kw>
 <kw name="Open Application" owner="common_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:18.719341" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/auth/login/login.html'.</msg>
+<msg time="2026-06-19T02:38:57.804600" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
 <arg>${url}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-19T01:18:18.719341" elapsed="1.350899"/>
+<status status="PASS" start="2026-06-19T02:38:57.803957" elapsed="2.266613"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-06-19T01:18:20.071248" elapsed="0.766328"/>
+<status status="PASS" start="2026-06-19T02:39:00.070570" elapsed="0.385372"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>${IMPLICIT_WAIT}</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-06-19T01:18:20.838584" elapsed="0.006538"/>
+<status status="PASS" start="2026-06-19T02:39:00.456974" elapsed="0.002970"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-19T01:18:20.845122" elapsed="0.041816"/>
+<status status="PASS" start="2026-06-19T02:39:00.459944" elapsed="0.030558"/>
 </kw>
 <arg>${url}</arg>
-<status status="PASS" start="2026-06-19T01:18:18.719341" elapsed="2.167597"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-form</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:20.886938" elapsed="0.047875"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:20.935790" elapsed="0.039675"/>
+<status status="PASS" start="2026-06-19T02:38:57.802915" elapsed="2.687587"/>
 </kw>
 <arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-06-19T01:18:18.717343" elapsed="2.258122"/>
+<status status="PASS" start="2026-06-19T02:38:57.796922" elapsed="2.693580"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:20.978471" level="INFO">Typing text 'Kcao360@gmail.com' into text field 'id=email-input'.</msg>
-<arg>id=email-input</arg>
-<arg>${TEST_USER_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:20.977476" elapsed="0.190174"/>
+<kw name="Apply Filters" owner="TourListPage">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:00.492503" level="INFO">Selecting options from selection list 'id=filter-location' by value Quảng Ninh.</msg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.492503" elapsed="0.085697"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:21.168700" level="INFO">Typing text 'wrongpass' into text field 'id=password-input'.</msg>
-<arg>id=password-input</arg>
-<arg>wrongpass</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:21.168700" elapsed="0.092339"/>
+<msg time="2026-06-19T02:39:00.579205" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.491501" elapsed="0.087704"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:21.262048" level="INFO">Clicking element 'id=btn-login'.</msg>
-<arg>id=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:21.261039" elapsed="0.085088"/>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:00.580205" level="INFO">Selecting options from selection list 'id=filter-price' by value 1500000.</msg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.580205" elapsed="0.108633"/>
 </kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:26.576632" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-06-19T01:18:26.576632" level="FAIL">Element 'id=toast-notification' did not get text 'Đăng nhập' in 5 seconds.</msg>
-<arg>id=toast-notification</arg>
-<arg>Đăng nhập</arg>
+<msg time="2026-06-19T02:39:00.689796" level="INFO">${price} = None</msg>
+<var>${price}</var>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.579205" elapsed="0.110591"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:00.689796" level="INFO">Selecting options from selection list 'id=filter-rating' by value 4.6.</msg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.689796" elapsed="0.101306"/>
+</kw>
+<msg time="2026-06-19T02:39:00.792132" level="INFO">${rating} = None</msg>
+<var>${rating}</var>
+<arg>'${rating}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.689796" elapsed="0.102336"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.792132" elapsed="0.023320"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T02:39:00.816445" elapsed="0.294202"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:01.111647" level="INFO">Executing JavaScript:
+document.getElementById('btn-apply-filters').click();
+Without any arguments.</msg>
+<arg>document.getElementById('btn-apply-filters').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-06-19T02:39:01.111647" elapsed="0.012051"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:01.123698" elapsed="0.030354"/>
+</kw>
+<arg>${location}</arg>
+<arg>${price}</arg>
+<arg>${rating}</arg>
+<status status="PASS" start="2026-06-19T02:39:00.490502" elapsed="0.663550"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
 <arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="FAIL" start="2026-06-19T01:18:21.347136" elapsed="5.230504">Element 'id=toast-notification' did not get text 'Đăng nhập' in 5 seconds.</status>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:01.154052" elapsed="0.018742"/>
+</kw>
+<arg>Quảng Ninh</arg>
+<arg>1500000</arg>
+<arg>4.6</arg>
+<status status="PASS" start="2026-06-19T02:38:57.795914" elapsed="3.376880"/>
+</kw>
+<kw name="Filter Tour Example">
+<kw name="Go To Tours List" owner="TourListPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:39:01.174326" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
+<var>${url}</var>
+<arg>${base_url}${TOURS_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:39:01.174326" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:01.178330" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T02:39:01.176369" elapsed="2.461601"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T02:39:03.638980" elapsed="0.381542"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.020522" elapsed="0.003661"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.024183" elapsed="0.028617"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T02:39:01.175332" elapsed="2.877468"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T02:39:01.173798" elapsed="2.879002"/>
+</kw>
+<kw name="Apply Filters" owner="TourListPage">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:04.054309" level="INFO">Selecting options from selection list 'id=filter-location' by value Lào Cai.</msg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.054309" elapsed="0.084549"/>
+</kw>
+<msg time="2026-06-19T02:39:04.138858" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.054309" elapsed="0.084549"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:04.138858" level="INFO">Selecting options from selection list 'id=filter-price' by value 4000000.</msg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.138858" elapsed="0.087869"/>
+</kw>
+<msg time="2026-06-19T02:39:04.226727" level="INFO">${price} = None</msg>
+<var>${price}</var>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.138858" elapsed="0.087869"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:04.227726" level="INFO">Selecting options from selection list 'id=filter-rating' by value 4.7.</msg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.227726" elapsed="0.075802"/>
+</kw>
+<msg time="2026-06-19T02:39:04.303528" level="INFO">${rating} = None</msg>
+<var>${rating}</var>
+<arg>'${rating}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.226727" elapsed="0.076801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.303528" elapsed="0.022601"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.326129" elapsed="0.311346"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:04.638467" level="INFO">Executing JavaScript:
+document.getElementById('btn-apply-filters').click();
+Without any arguments.</msg>
+<arg>document.getElementById('btn-apply-filters').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.637475" elapsed="0.019999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.657474" elapsed="0.024216"/>
+</kw>
+<arg>${location}</arg>
+<arg>${price}</arg>
+<arg>${rating}</arg>
+<status status="PASS" start="2026-06-19T02:39:04.053802" elapsed="0.628885"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.682687" elapsed="0.023739"/>
+</kw>
+<arg>Lào Cai</arg>
+<arg>4000000</arg>
+<arg>4.7</arg>
+<status status="PASS" start="2026-06-19T02:39:01.172794" elapsed="3.534634"/>
+</kw>
+<kw name="Filter Tour Example">
+<kw name="Go To Tours List" owner="TourListPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:39:04.708426" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
+<var>${url}</var>
+<arg>${base_url}${TOURS_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.708426" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:04.709430" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T02:39:04.709430" elapsed="2.393255"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.102685" elapsed="0.381146"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.483831" elapsed="0.005008"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.488839" elapsed="0.048151"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T02:39:04.708426" elapsed="2.829557"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T02:39:04.708426" elapsed="2.829557"/>
+</kw>
+<kw name="Apply Filters" owner="TourListPage">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:07.540984" level="INFO">Selecting options from selection list 'id=filter-location' by value Ninh Bình.</msg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.539984" elapsed="0.137248"/>
+</kw>
+<msg time="2026-06-19T02:39:07.677232" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.538983" elapsed="0.138249"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:07.678234" level="INFO">Selecting options from selection list 'id=filter-price' by value 6000000.</msg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.678234" elapsed="0.256289"/>
+</kw>
+<msg time="2026-06-19T02:39:07.935843" level="INFO">${price} = None</msg>
+<var>${price}</var>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.677232" elapsed="0.258611"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:07.936860" level="INFO">Selecting options from selection list 'id=filter-rating' by value 4.6.</msg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.935843" elapsed="0.106432"/>
+</kw>
+<msg time="2026-06-19T02:39:08.042275" level="INFO">${rating} = None</msg>
+<var>${rating}</var>
+<arg>'${rating}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:07.935843" elapsed="0.106432"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:08.043785" elapsed="0.033932"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T02:39:08.077717" elapsed="0.308975"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:08.387693" level="INFO">Executing JavaScript:
+document.getElementById('btn-apply-filters').click();
+Without any arguments.</msg>
+<arg>document.getElementById('btn-apply-filters').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-06-19T02:39:08.386692" elapsed="0.040023"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:08.426715" elapsed="0.065368"/>
+</kw>
+<arg>${location}</arg>
+<arg>${price}</arg>
+<arg>${rating}</arg>
+<status status="PASS" start="2026-06-19T02:39:07.537983" elapsed="0.954100"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:08.493084" elapsed="0.030582"/>
+</kw>
+<arg>Ninh Bình</arg>
+<arg>6000000</arg>
+<arg>4.6</arg>
+<status status="PASS" start="2026-06-19T02:39:04.707428" elapsed="3.816238"/>
 </kw>
 <kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:26.579662" level="INFO">${test_name} = Invalid Login With Wrong Password</msg>
+<msg time="2026-06-19T02:39:08.525154" level="INFO">${test_name} = Filter Tours Data Driven</msg>
 <var>${test_name}</var>
 <arg>${TEST NAME}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.578660" elapsed="0.001002"/>
+<status status="PASS" start="2026-06-19T02:39:08.525154" elapsed="0.000000"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2026-06-19T01:18:26.579662" level="INFO">${safe_test_name} = Invalid_Login_With_Wrong_Password</msg>
+<msg time="2026-06-19T02:39:08.526150" level="INFO">${safe_test_name} = Filter_Tours_Data_Driven</msg>
 <var>${safe_test_name}</var>
 <arg>${test_name}</arg>
 <arg>${SPACE}</arg>
 <arg>_</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.579662" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:39:08.525154" elapsed="0.000996"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:26.579662" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/login</msg>
+<msg time="2026-06-19T02:39:08.526150" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/tour_list</msg>
 <var>${directory}</var>
 <arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.579662" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:39:08.526150" elapsed="0.000000"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2026-06-19T01:18:26.579662" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\login"&gt;D:\nature-travel\tests\screenshot\login&lt;/a&gt;' already exists.</msg>
+<msg time="2026-06-19T02:39:08.527156" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\tour_list"&gt;D:\nature-travel\tests\screenshot\tour_list&lt;/a&gt;' already exists.</msg>
 <arg>${directory}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.579662" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:39:08.526150" elapsed="0.001006"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:26.749472" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/login/Invalid_Login_With_Wrong_Password.png"&gt;&lt;img src="../screenshot/login/Invalid_Login_With_Wrong_Password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-19T02:39:08.689800" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/tour_list/Filter_Tours_Data_Driven.png"&gt;&lt;img src="../screenshot/tour_list/Filter_Tours_Data_Driven.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${directory}/${safe_test_name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.579662" elapsed="0.169810"/>
+<status status="PASS" start="2026-06-19T02:39:08.527156" elapsed="0.162644"/>
 </kw>
-<arg>login</arg>
-<status status="PASS" start="2026-06-19T01:18:26.578660" elapsed="0.170812"/>
+<arg>tour_list</arg>
+<status status="PASS" start="2026-06-19T02:39:08.523666" elapsed="0.166699"/>
 </kw>
-<doc>Enter bad credentials and verify error toast appears.</doc>
-<status status="FAIL" start="2026-06-19T01:18:18.716343" elapsed="8.033129">Element 'id=toast-notification' did not get text 'Đăng nhập' in 5 seconds.</status>
+<status status="PASS" start="2026-06-19T02:38:57.794908" elapsed="10.895457"/>
 </test>
-<test id="s1-t3" name="Invalid Login With Missing Password" line="27">
-<kw name="Go To Login Page" owner="LoginPage">
+<test id="s1-t4" name="Apply Location Filter Only" line="28">
+<kw name="Go To Tours List" owner="TourListPage">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:26.752991" level="INFO">${url} = http://127.0.0.1:3001/pages/auth/login/login.html</msg>
+<msg time="2026-06-19T02:39:08.692560" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
 <var>${url}</var>
-<arg>${base_url}${LOGIN_PATH}</arg>
+<arg>${base_url}${TOURS_PATH}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.751991" elapsed="0.001000"/>
+<status status="PASS" start="2026-06-19T02:39:08.692028" elapsed="0.000532"/>
 </kw>
 <kw name="Open Application" owner="common_keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:26.754002" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/auth/login/login.html'.</msg>
+<msg time="2026-06-19T02:39:08.693110" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
 <arg>${url}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-19T01:18:26.752991" elapsed="2.542826"/>
+<status status="PASS" start="2026-06-19T02:39:08.693110" elapsed="2.520442"/>
 </kw>
 <kw name="Set Window Size" owner="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.295817" elapsed="0.386143"/>
+<status status="PASS" start="2026-06-19T02:39:11.216082" elapsed="0.380819"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>${IMPLICIT_WAIT}</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.681960" elapsed="0.004152"/>
+<status status="PASS" start="2026-06-19T02:39:11.596901" elapsed="0.004997"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.686112" elapsed="0.051392"/>
+<status status="PASS" start="2026-06-19T02:39:11.601898" elapsed="0.045812"/>
 </kw>
 <arg>${url}</arg>
-<status status="PASS" start="2026-06-19T01:18:26.752991" elapsed="2.985826"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-form</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.738817" elapsed="0.060701"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.799518" elapsed="0.022368"/>
+<status status="PASS" start="2026-06-19T02:39:08.692560" elapsed="2.956157"/>
 </kw>
 <arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-06-19T01:18:26.751991" elapsed="3.069895"/>
+<status status="PASS" start="2026-06-19T02:39:08.691513" elapsed="2.958206"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:29.823897" level="INFO">Typing text 'Kcao360@gmail.com' into text field 'id=email-input'.</msg>
-<arg>id=email-input</arg>
-<arg>${TEST_USER_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.822890" elapsed="0.141307"/>
+<kw name="Apply Filters" owner="TourListPage">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:11.655264" level="INFO">Selecting options from selection list 'id=filter-location' by value Quảng Ninh.</msg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:11.655264" elapsed="0.141934"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:29.967209" level="INFO">Typing text '' into text field 'id=password-input'.</msg>
-<arg>id=password-input</arg>
+<msg time="2026-06-19T02:39:11.797198" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:11.654221" elapsed="0.142977"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2026-06-19T02:39:11.799881" level="INFO">${price} = None</msg>
+<var>${price}</var>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:11.798227" elapsed="0.001654"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2026-06-19T02:39:11.800906" level="INFO">${rating} = None</msg>
+<var>${rating}</var>
+<arg>'${rating}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:11.800906" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:11.801947" elapsed="0.041812"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T02:39:11.843759" elapsed="0.311889"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:12.155648" level="INFO">Executing JavaScript:
+document.getElementById('btn-apply-filters').click();
+Without any arguments.</msg>
+<arg>document.getElementById('btn-apply-filters').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.155648" elapsed="0.018404"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.174052" elapsed="0.043079"/>
+</kw>
+<arg>Quảng Ninh</arg>
+<status status="PASS" start="2026-06-19T02:39:11.651712" elapsed="0.565419"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.217131" elapsed="0.040413"/>
+</kw>
+<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:39:12.260556" level="INFO">${test_name} = Apply Location Filter Only</msg>
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.259556" elapsed="0.001000"/>
+</kw>
+<kw name="Replace String" owner="String">
+<msg time="2026-06-19T02:39:12.270133" level="INFO">${safe_test_name} = Apply_Location_Filter_Only</msg>
+<var>${safe_test_name}</var>
+<arg>${test_name}</arg>
+<arg>${SPACE}</arg>
+<arg>_</arg>
+<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.267149" elapsed="0.002984"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:39:12.271125" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/tour_list</msg>
+<var>${directory}</var>
+<arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.271125" elapsed="0.000000"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-06-19T02:39:12.272125" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\tour_list"&gt;D:\nature-travel\tests\screenshot\tour_list&lt;/a&gt;' already exists.</msg>
+<arg>${directory}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.271125" elapsed="0.001000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:12.423627" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/tour_list/Apply_Location_Filter_Only.png"&gt;&lt;img src="../screenshot/tour_list/Apply_Location_Filter_Only.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${directory}/${safe_test_name}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.272125" elapsed="0.151502"/>
+</kw>
+<arg>tour_list</arg>
+<status status="PASS" start="2026-06-19T02:39:12.258562" elapsed="0.166178"/>
+</kw>
+<doc>Apply only location filter and verify results.</doc>
+<status status="PASS" start="2026-06-19T02:39:08.690894" elapsed="3.733846"/>
+</test>
+<test id="s1-t5" name="Apply Price Filter Only" line="34">
+<kw name="Go To Tours List" owner="TourListPage">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-06-19T02:39:12.425943" level="INFO">${url} = http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html</msg>
+<var>${url}</var>
+<arg>${base_url}${TOURS_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.425943" elapsed="0.000000"/>
+</kw>
+<kw name="Open Application" owner="common_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:12.426952" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/tours/tour_list/tour_list.html'.</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.426952" elapsed="2.324632"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-06-19T02:39:14.751584" elapsed="0.375210"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${IMPLICIT_WAIT}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.126794" elapsed="0.007960"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.134754" elapsed="0.053910"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2026-06-19T02:39:12.425943" elapsed="2.762721"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2026-06-19T02:39:12.425943" elapsed="2.762721"/>
+</kw>
+<kw name="Apply Filters" owner="TourListPage">
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2026-06-19T02:39:15.191145" level="INFO">${location} = None</msg>
+<var>${location}</var>
+<arg>'${location}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-location</arg>
+<arg>${location}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.190136" elapsed="0.001009"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:15.191145" level="INFO">Selecting options from selection list 'id=filter-price' by value 2500000.</msg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.191145" elapsed="0.150626"/>
+</kw>
+<msg time="2026-06-19T02:39:15.342774" level="INFO">${price} = None</msg>
+<var>${price}</var>
+<arg>'${price}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-price</arg>
+<arg>${price}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.191145" elapsed="0.151629"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<msg time="2026-06-19T02:39:15.342774" level="INFO">${rating} = None</msg>
+<var>${rating}</var>
+<arg>'${rating}' != ''</arg>
+<arg>Select From List By Value</arg>
+<arg>id=filter-rating</arg>
+<arg>${rating}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.342774" elapsed="0.000999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.343773" elapsed="0.102448"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=btn-apply-filters</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.446221" elapsed="0.340784"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-06-19T02:39:15.790005" level="INFO">Executing JavaScript:
+document.getElementById('btn-apply-filters').click();
+Without any arguments.</msg>
+<arg>document.getElementById('btn-apply-filters').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.789013" elapsed="0.021661"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.817259" elapsed="0.065021"/>
+</kw>
 <arg>${EMPTY}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:29.965210" elapsed="0.113481"/>
+<arg>2500000</arg>
+<status status="PASS" start="2026-06-19T02:39:15.188664" elapsed="0.693616"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:30.079647" level="INFO">Clicking element 'id=btn-login'.</msg>
-<arg>id=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:30.078691" elapsed="0.103189"/>
-</kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:37.126011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-06-19T01:18:37.126011" level="FAIL">Element with locator 'id=toast-notification' not found.</msg>
-<arg>id=toast-notification</arg>
-<arg>Vui lòng điền đầy đủ email và mật khẩu.</arg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=tours-grid-container</arg>
 <arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="FAIL" start="2026-06-19T01:18:30.182883" elapsed="6.944218">Element with locator 'id=toast-notification' not found.</status>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-06-19T02:39:15.883799" elapsed="0.110884"/>
 </kw>
 <kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:37.128123" level="INFO">${test_name} = Invalid Login With Missing Password</msg>
+<msg time="2026-06-19T02:39:16.008374" level="INFO">${test_name} = Apply Price Filter Only</msg>
 <var>${test_name}</var>
 <arg>${TEST NAME}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.128123" elapsed="0.001010"/>
+<status status="PASS" start="2026-06-19T02:39:16.007207" elapsed="0.001167"/>
 </kw>
 <kw name="Replace String" owner="String">
-<msg time="2026-06-19T01:18:37.129133" level="INFO">${safe_test_name} = Invalid_Login_With_Missing_Password</msg>
+<msg time="2026-06-19T02:39:16.008374" level="INFO">${safe_test_name} = Apply_Price_Filter_Only</msg>
 <var>${safe_test_name}</var>
 <arg>${test_name}</arg>
 <arg>${SPACE}</arg>
 <arg>_</arg>
 <doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.129133" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:39:16.008374" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:37.129133" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/login</msg>
+<msg time="2026-06-19T02:39:16.008374" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/tour_list</msg>
 <var>${directory}</var>
 <arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.129133" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:39:16.008374" elapsed="0.000000"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2026-06-19T01:18:37.130111" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\login"&gt;D:\nature-travel\tests\screenshot\login&lt;/a&gt;' already exists.</msg>
+<msg time="2026-06-19T02:39:16.009385" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\tour_list"&gt;D:\nature-travel\tests\screenshot\tour_list&lt;/a&gt;' already exists.</msg>
 <arg>${directory}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.130111" elapsed="0.000000"/>
+<status status="PASS" start="2026-06-19T02:39:16.009385" elapsed="0.000000"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:37.415754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/login/Invalid_Login_With_Missing_Password.png"&gt;&lt;img src="../screenshot/login/Invalid_Login_With_Missing_Password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-06-19T02:39:16.259244" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/tour_list/Apply_Price_Filter_Only.png"&gt;&lt;img src="../screenshot/tour_list/Apply_Price_Filter_Only.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>${directory}/${safe_test_name}.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.130111" elapsed="0.285643"/>
+<status status="PASS" start="2026-06-19T02:39:16.009385" elapsed="0.249859"/>
 </kw>
-<arg>login</arg>
-<status status="PASS" start="2026-06-19T01:18:37.128123" elapsed="0.287631"/>
+<arg>tour_list</arg>
+<status status="PASS" start="2026-06-19T02:39:16.007207" elapsed="0.252037"/>
 </kw>
-<doc>Leave password blank and verify validation message.</doc>
-<status status="FAIL" start="2026-06-19T01:18:26.750979" elapsed="10.665787">Element with locator 'id=toast-notification' not found.</status>
-</test>
-<test id="s1-t4" name="Invalid Login With Wrong Email" line="35">
-<kw name="Go To Login Page" owner="LoginPage">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:37.418826" level="INFO">${url} = http://127.0.0.1:3001/pages/auth/login/login.html</msg>
-<var>${url}</var>
-<arg>${base_url}${LOGIN_PATH}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.418826" elapsed="0.000000"/>
-</kw>
-<kw name="Open Application" owner="common_keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:37.419814" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/auth/login/login.html'.</msg>
-<arg>${url}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.419814" elapsed="2.664780"/>
-</kw>
-<kw name="Set Window Size" owner="SeleniumLibrary">
-<arg>1920</arg>
-<arg>1080</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-06-19T01:18:40.084594" elapsed="0.473305"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>${IMPLICIT_WAIT}</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-06-19T01:18:40.558903" elapsed="0.037498"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-19T01:18:40.596401" elapsed="0.109398"/>
-</kw>
-<arg>${url}</arg>
-<status status="PASS" start="2026-06-19T01:18:37.418826" elapsed="3.289000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-form</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:40.707826" elapsed="0.057288"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:40.766325" elapsed="0.032252"/>
-</kw>
-<arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-06-19T01:18:37.417780" elapsed="3.380797"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:40.800337" level="INFO">Typing text 'wronguser@example.com' into text field 'id=email-input'.</msg>
-<arg>id=email-input</arg>
-<arg>wronguser@example.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:40.799644" elapsed="0.451394"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:41.252072" level="INFO">Typing text 'caokien' into text field 'id=password-input'.</msg>
-<arg>id=password-input</arg>
-<arg>${TEST_USER_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.252072" elapsed="0.344877"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:41.598953" level="INFO">Clicking element 'id=btn-login'.</msg>
-<arg>id=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.596949" elapsed="0.287412"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=toast-notification</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.885358" elapsed="0.065856"/>
-</kw>
-<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:41.952233" level="INFO">${test_name} = Invalid Login With Wrong Email</msg>
-<var>${test_name}</var>
-<arg>${TEST NAME}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.952233" elapsed="0.000000"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-06-19T01:18:41.953242" level="INFO">${safe_test_name} = Invalid_Login_With_Wrong_Email</msg>
-<var>${safe_test_name}</var>
-<arg>${test_name}</arg>
-<arg>${SPACE}</arg>
-<arg>_</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.952233" elapsed="0.001009"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:41.953242" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/login</msg>
-<var>${directory}</var>
-<arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.953242" elapsed="0.000000"/>
-</kw>
-<kw name="Create Directory" owner="OperatingSystem">
-<msg time="2026-06-19T01:18:41.961083" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\login"&gt;D:\nature-travel\tests\screenshot\login&lt;/a&gt;' already exists.</msg>
-<arg>${directory}</arg>
-<doc>Creates the specified directory.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.953242" elapsed="0.007841"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:42.299607" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/login/Invalid_Login_With_Wrong_Email.png"&gt;&lt;img src="../screenshot/login/Invalid_Login_With_Wrong_Email.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${directory}/${safe_test_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-19T01:18:41.961083" elapsed="0.338524"/>
-</kw>
-<arg>login</arg>
-<status status="PASS" start="2026-06-19T01:18:41.951214" elapsed="0.348393"/>
-</kw>
-<doc>Enter an unknown email and verify error toast appears.</doc>
-<status status="PASS" start="2026-06-19T01:18:37.417780" elapsed="4.881827"/>
-</test>
-<test id="s1-t5" name="Login Without Email" line="43">
-<kw name="Go To Login Page" owner="LoginPage">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:42.302123" level="INFO">${url} = http://127.0.0.1:3001/pages/auth/login/login.html</msg>
-<var>${url}</var>
-<arg>${base_url}${LOGIN_PATH}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:42.301116" elapsed="0.001007"/>
-</kw>
-<kw name="Open Application" owner="common_keywords">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:42.302123" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:3001/pages/auth/login/login.html'.</msg>
-<arg>${url}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-06-19T01:18:42.302123" elapsed="3.033990"/>
-</kw>
-<kw name="Set Window Size" owner="SeleniumLibrary">
-<arg>1920</arg>
-<arg>1080</arg>
-<doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" start="2026-06-19T01:18:45.337123" elapsed="0.437788"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>${IMPLICIT_WAIT}</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-06-19T01:18:45.775908" elapsed="0.022573"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-06-19T01:18:45.798481" elapsed="0.078231"/>
-</kw>
-<arg>${url}</arg>
-<status status="PASS" start="2026-06-19T01:18:42.302123" elapsed="3.575597"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=login-form</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:45.878717" elapsed="0.057736"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>id=btn-login</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-06-19T01:18:45.936453" elapsed="0.039199"/>
-</kw>
-<arg>${BASE_URL}</arg>
-<status status="PASS" start="2026-06-19T01:18:42.301116" elapsed="3.674536"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:45.979985" level="INFO">Typing text 'caokien' into text field 'id=password-input'.</msg>
-<arg>id=password-input</arg>
-<arg>${TEST_USER_PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:45.977981" elapsed="0.189683"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:46.175241" level="INFO">Clicking element 'id=btn-login'.</msg>
-<arg>id=btn-login</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-06-19T01:18:46.174243" elapsed="0.190850"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:53.463379" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-06-19T01:18:53.463379" level="FAIL">Element 'id=toast-notification' not visible after 5 seconds.</msg>
-<arg>id=toast-notification</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-06-19T01:18:46.365093" elapsed="7.099286">Element 'id=toast-notification' not visible after 5 seconds.</status>
-</kw>
-<kw name="Capture Screenshot For Test" owner="common_keywords" type="TEARDOWN">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:53.466403" level="INFO">${test_name} = Login Without Email</msg>
-<var>${test_name}</var>
-<arg>${TEST NAME}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:53.465402" elapsed="0.001001"/>
-</kw>
-<kw name="Replace String" owner="String">
-<msg time="2026-06-19T01:18:53.466403" level="INFO">${safe_test_name} = Login_Without_Email</msg>
-<var>${safe_test_name}</var>
-<arg>${test_name}</arg>
-<arg>${SPACE}</arg>
-<arg>_</arg>
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<status status="PASS" start="2026-06-19T01:18:53.466403" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-06-19T01:18:53.467402" level="INFO">${directory} = D:\nature-travel\tests\resources/../screenshot/login</msg>
-<var>${directory}</var>
-<arg>D:\\nature-travel\\tests\\resources/../screenshot/${feature}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-06-19T01:18:53.467402" elapsed="0.000000"/>
-</kw>
-<kw name="Create Directory" owner="OperatingSystem">
-<msg time="2026-06-19T01:18:53.467402" level="INFO" html="true">Directory '&lt;a href="file://D:\nature-travel\tests\screenshot\login"&gt;D:\nature-travel\tests\screenshot\login&lt;/a&gt;' already exists.</msg>
-<arg>${directory}</arg>
-<doc>Creates the specified directory.</doc>
-<status status="PASS" start="2026-06-19T01:18:53.467402" elapsed="0.000998"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-06-19T01:18:53.784990" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshot/login/Login_Without_Email.png"&gt;&lt;img src="../screenshot/login/Login_Without_Email.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>${directory}/${safe_test_name}.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-06-19T01:18:53.468400" elapsed="0.316590"/>
-</kw>
-<arg>login</arg>
-<status status="PASS" start="2026-06-19T01:18:53.465402" elapsed="0.319588"/>
-</kw>
-<doc>Leave the email blank and verify validation message appears.</doc>
-<status status="FAIL" start="2026-06-19T01:18:42.299607" elapsed="11.485383">Element 'id=toast-notification' not visible after 5 seconds.</status>
+<doc>Apply only price filter and verify results.</doc>
+<status status="PASS" start="2026-06-19T02:39:12.424740" elapsed="3.834504"/>
 </test>
 <kw name="Close Application" owner="common_keywords" type="TEARDOWN">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2026-06-19T01:18:53.788493" elapsed="12.063020"/>
+<status status="PASS" start="2026-06-19T02:39:16.262242" elapsed="16.995794"/>
 </kw>
-<status status="PASS" start="2026-06-19T01:18:53.786478" elapsed="12.065035"/>
+<status status="PASS" start="2026-06-19T02:39:16.260246" elapsed="16.997790"/>
 </kw>
-<doc>Login tests (POM)</doc>
-<status status="FAIL" start="2026-06-19T01:18:13.517823" elapsed="52.334781"/>
+<doc>Tour list tests (POM)</doc>
+<status status="PASS" start="2026-06-19T02:38:51.337078" elapsed="41.920958"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="3" skip="0">All Tests</stat>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="LoginTests" id="s1" pass="2" fail="3" skip="0">LoginTests</stat>
+<stat name="TourListTests" id="s1" pass="5" fail="0" skip="0">TourListTests</stat>
 </suite>
 </statistics>
 <errors>

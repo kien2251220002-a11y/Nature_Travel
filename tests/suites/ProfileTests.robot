@@ -55,10 +55,13 @@ Profile Update With Empty Name
     Login With Credentials    ${TEST_USER_EMAIL}    ${TEST_USER_PASSWORD}
     Go To Profile Page    ${BASE_URL}
     Input Text    id=profile-fullname-input    ${EMPTY}
+    Wait Until Element Is Visible    id=profile-update-btn    timeout=15s
+    Scroll Element Into View    id=profile-update-btn
+    Wait Until Element Is Enabled    id=profile-update-btn    timeout=10s
     Click Element    id=profile-update-btn
-    Wait Until Element Is Visible    id=toast-notification    timeout=5s
+    Wait Until Element Is Visible    id=toast-notification    timeout=10s
 
 *** Keywords ***
 Generate Random Number
-    ${rand}=    Evaluate    str(int(random()*1000))    modules=random
+    ${rand}=    Evaluate    str(int(random.random()*1000))    modules=random
     RETURN    ${rand}

@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const loginForm = document.getElementById('login-form');
   if (loginForm) {
-    loginForm.addEventListener('submit', handleLogin);
+    loginForm.noValidate = true;
+    loginForm.setAttribute('novalidate', 'novalidate');
+    loginForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleLogin(e);
+    });
   }
 });
 

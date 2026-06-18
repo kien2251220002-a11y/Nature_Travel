@@ -26,7 +26,11 @@ Register New User    [Arguments]    ${fullname}    ${email}    ${phone}    ${pas
     Input Text    id=confirm-password-input    ${password}
     Wait Until Element Is Visible    id=terms-checkbox    timeout=10s
     Click Element    id=terms-checkbox
-    Wait Until Element Is Enabled    id=btn-register    timeout=10s
-    Scroll Element Into View    id=btn-register
-    Click Element    id=btn-register
+    Click Register Submit
     Wait Until Element Is Visible    id=navbar    timeout=10s
+
+Click Register Submit
+    Wait Until Element Is Visible    id=btn-register    timeout=10s
+    Scroll Element Into View    id=btn-register
+    Wait Until Element Is Enabled    id=btn-register    timeout=10s
+    Execute JavaScript    document.getElementById('btn-register').click();

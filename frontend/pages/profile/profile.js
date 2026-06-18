@@ -18,7 +18,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Handle Profile Update Form
   const editForm = document.getElementById('profile-edit-form');
   if (editForm) {
-    editForm.addEventListener('submit', handleProfileUpdate);
+    editForm.noValidate = true;
+    editForm.setAttribute('novalidate', 'novalidate');
+    editForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleProfileUpdate(e);
+    });
   }
 });
 

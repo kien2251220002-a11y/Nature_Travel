@@ -16,7 +16,7 @@ Register Page Loads
 Register New User
 	[Documentation]    Open register page and submit new user registration (sanity).
 	Go To Register Page    ${BASE_URL}
-	${rnd}=    Evaluate    str(int(random()*10000))    modules=random
+	${rnd}=    Evaluate    str(int(random.random()*10000))    modules=random
 	${name}=    Set Variable    Test User ${rnd}
 	${email}=    Set Variable    user${rnd}@example.com
 	Register New User    ${name}    ${email}    0901234${rnd}    secret123
@@ -31,7 +31,7 @@ Register With Short Password
 	Input Text    id=password-input    123
 	Input Text    id=confirm-password-input    123
 	Click Element    id=terms-checkbox
-	Click Element    id=btn-register
+	Click Register Submit
 	Wait Until Element Contains    id=toast-notification    Mật khẩu phải dài ít nhất 6 ký tự.    timeout=5s
 
 Register With Mismatched Passwords
@@ -43,7 +43,7 @@ Register With Mismatched Passwords
 	Input Text    id=password-input    secret123
 	Input Text    id=confirm-password-input    secret321
 	Click Element    id=terms-checkbox
-	Click Element    id=btn-register
+	Click Register Submit
 	Wait Until Element Contains    id=toast-notification    Mật khẩu xác nhận không trùng khớp.    timeout=5s
 
 Register Without Accepting Terms
@@ -54,5 +54,5 @@ Register Without Accepting Terms
 	Input Text    id=phone-input    0900000002
 	Input Text    id=password-input    secret123
 	Input Text    id=confirm-password-input    secret123
-	Click Element    id=btn-register
+	Click Register Submit
 	Wait Until Element Contains    id=toast-notification    Bạn phải đồng ý với Điều khoản dịch vụ.    timeout=5s

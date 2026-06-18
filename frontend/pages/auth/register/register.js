@@ -6,7 +6,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const registerForm = document.getElementById('register-form');
   if (registerForm) {
-    registerForm.addEventListener('submit', handleRegister);
+    registerForm.noValidate = true;
+    registerForm.setAttribute('novalidate', 'novalidate');
+    registerForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleRegister(e);
+    });
   }
 });
 

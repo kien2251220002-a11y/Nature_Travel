@@ -22,7 +22,7 @@ Invalid Login With Wrong Password
 	Input Text    id=email-input    ${TEST_USER_EMAIL}
 	Input Text    id=password-input    wrongpass
 	Click Element    id=btn-login
-	Wait Until Element Contains    id=toast-notification    Đăng nhập    timeout=5s
+	Wait Until Element Contains    id=toast-notification    Email hoặc mật khẩu không chính xác.    timeout=5s
 
 Invalid Login With Missing Password
 	[Documentation]    Leave password blank and verify validation message.
